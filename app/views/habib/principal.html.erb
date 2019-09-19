@@ -4,3 +4,13 @@
 <%= link_to('Welcome' ,  {:action =>'welcome' }) %>
 <%= link_to('Index' , {:action =>'principal'}) %>
 <%= link_to('page id', {:action=>'welcome',:page=>5 , :id=>8}) %>
+<div id="slider">
+	<figure>
+		  <%= image_tag("dep.png", :alt => "rss feed") %>
+			<%= image_tag("garde_national.png", :alt => "rss feed") %>
+			<%= image_tag("ministere.jpg", :alt => "rss feed") %>
+			<%= image_tag("police.jpg", :alt => "rss feed") %>
+			<%= image_tag("logo.jpeg", :alt => "rss feed") %>
+	</figure>
+</div>
+<%= javascript_include_tag 'test', 'data-turbolinks-track': 'reload' %>
