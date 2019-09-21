@@ -30,7 +30,7 @@
   
   <div class="field">
     <%= f.label :cin %><br />
-    <%= f.email_field :cin %>
+    <%= f.text_field :cin , :minlength=>8 ,:maxlength=>8 %>
   </div>
 
   <div class="field">
@@ -44,7 +44,7 @@
   </div>
   
   <div class="field">
-    <%= f.select(:type, [['Police', 'Police'], ['National Guard', 'National Guard']]) %>
+    <%= f.select :type_agent, options_for_select(options_for_types), {:include_blank => true} %>
   </div>
   
   <div class="field">

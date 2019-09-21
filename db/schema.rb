@@ -26,7 +26,7 @@ ActiveRecord::Schema.define(version: 20190907165424) do
     t.string "cin", limit: 9
     t.string "first_name", limit: 60
     t.string "last_name", limit: 60
-    t.string "type", limit: 30
+    t.string "type_agent", limit: 30
     t.integer "rule", default: 1
     t.string "reset_password_token"
     t.datetime "reset_password_sent_at"

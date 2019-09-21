@@ -10,7 +10,7 @@ class DeviseCreateUsers < ActiveRecord::Migration[5.1]
       t.string :cin , :limit=>9
       t.string :first_name , :limit =>60
       t.string :last_name, :limit=>60
-      t.string :type, :limit=>30
+      t.string :type_agent, :limit=>30
       t.integer :rule , default:1
       ## Recoverable
       t.string   :reset_password_token
