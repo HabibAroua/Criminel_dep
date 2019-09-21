@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @governorate.name %>
+</p>
+
+<p>
+  <strong>Population:</strong>
+  <%= @governorate.population %>
+</p>
+
+<p>
+  <strong>Zone:</strong>
+  <%= @governorate.zone %>
+</p>
+
+<%= link_to 'Edit', edit_governorate_path(@governorate) %> |
+<%= link_to 'Back', governorates_path %>

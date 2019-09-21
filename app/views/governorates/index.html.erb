@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Governorates</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Population</th>
+      <th>Zone</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @governorates.each do |governorate| %>
+      <tr>
+        <td><%= governorate.name %></td>
+        <td><%= governorate.population %></td>
+        <td><%= governorate.zone %></td>
+        <td><%= link_to 'Show', governorate %></td>
+        <td><%= link_to 'Edit', edit_governorate_path(governorate) %></td>
+        <td><%= link_to 'Destroy', governorate, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Governorate', new_governorate_path %>
