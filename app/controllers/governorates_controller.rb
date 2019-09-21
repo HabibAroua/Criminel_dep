@@ -14,7 +14,7 @@ class GovernoratesController < ApplicationController
 
   # GET /governorates/new
   def new
-    if current_user.rule == 0
+    if current_user.rule == 1
        redirect_to :action => "index"
     else
       @governorate = Governorate.new
