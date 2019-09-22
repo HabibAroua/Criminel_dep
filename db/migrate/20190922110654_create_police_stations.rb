@@ -6,6 +6,7 @@ class CreatePoliceStations < ActiveRecord::Migration[5.1]
       t.integer :postal_code
       t.string :telephone , :limit =>8
       t.string :fax , :limit =>8
+      t.integer :governorate_id
       t.timestamps
     end 
   end

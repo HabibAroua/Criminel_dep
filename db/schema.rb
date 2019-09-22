@@ -25,6 +25,7 @@ ActiveRecord::Schema.define(version: 20190922110654) do
     t.integer "postal_code"
     t.string "telephone", limit: 8
     t.string "fax", limit: 8
+    t.integer "governorate_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
