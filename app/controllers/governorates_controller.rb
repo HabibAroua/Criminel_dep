@@ -10,6 +10,8 @@ class GovernoratesController < ApplicationController
   # GET /governorates/1
   # GET /governorates/1.json
   def show
+    @governorates=Governorate.find(params[:id])
+    @police_stations=@governorates.police_stations
   end
 
   # GET /governorates/new
@@ -38,6 +40,14 @@ class GovernoratesController < ApplicationController
         format.html { render :new }
         format.json { render json: @governorate.errors, status: :unprocessable_entity }
       end
+    end
+  end
+  
+  def insert
+    @x=params[:id]
+    @address = params[:police_station][:address]
+    if @address=='habib'
+      redirect_to "https://www.youtube.com/watch?v=zbmHf5jJf58"
     end
   end
 
@@ -75,4 +85,9 @@ class GovernoratesController < ApplicationController
     def governorate_params
       params.require(:governorate).permit(:name, :population, :zone)
     end
+    
+    def add_police_station
+     redirect_to :action=>'show'
+    end
+    
 end
