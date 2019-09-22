@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :police_stations
   resources :governorates
   resources :posts
   #devise_for :users

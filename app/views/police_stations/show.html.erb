@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @police_station.address %>
+</p>
+
+<p>
+  <strong>Postal code:</strong>
+  <%= @police_station.postal_code %>
+</p>
+
+<p>
+  <strong>Telephone:</strong>
+  <%= @police_station.telephone %>
+</p>
+
+<p>
+  <strong>Fax:</strong>
+  <%= @police_station.fax %>
+</p>
+
+<%= link_to 'Edit', edit_police_station_path(@police_station) %> |
+<%= link_to 'Back', police_stations_path %>

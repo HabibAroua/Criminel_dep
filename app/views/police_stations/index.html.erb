@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Police Stations</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Address</th>
+      <th>Postal code</th>
+      <th>Telephone</th>
+      <th>Fax</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @police_stations.each do |police_station| %>
+      <tr>
+        <td><%= police_station.address %></td>
+        <td><%= police_station.postal_code %></td>
+        <td><%= police_station.telephone %></td>
+        <td><%= police_station.fax %></td>
+        <td><%= link_to 'Show', police_station %></td>
+        <td><%= link_to 'Edit', edit_police_station_path(police_station) %></td>
+        <td><%= link_to 'Destroy', police_station, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Police Station', new_police_station_path %>

@@ -10,12 +10,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190921134552) do
+ActiveRecord::Schema.define(version: 20190922110654) do
 
   create_table "governorates", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
     t.string "name"
     t.integer "population"
     t.string "zone"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "police_stations", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
+    t.string "address", limit: 50
+    t.integer "postal_code"
+    t.string "telephone", limit: 8
+    t.string "fax", limit: 8
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
