@@ -31,6 +31,7 @@
             </div>
             
             <div class="field">
+              <%= f.label :type_agent %><br>
               <%= f.select :type_agent, options_for_select(options_for_types), {:include_blank => true} , class:"form-control" %>
             </div>
             
