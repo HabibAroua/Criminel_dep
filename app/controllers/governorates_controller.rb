@@ -44,11 +44,14 @@ class GovernoratesController < ApplicationController
   end
   
   def insert
-    @x=params[:id]
-    @address = params[:police_station][:address]
-    if @address=='habib'
-      redirect_to "https://www.youtube.com/watch?v=zbmHf5jJf58"
-    end
+    @g=Governorate.find_by_id(params[:id][:id])
+    @p=PoliceStation.new
+    @p.address=params[:police_station][:address]
+    @p.postal_code=params[:police_station][:postal_code]
+    @p.telephone=params[:police_station][:telephone]
+    @p.fax=params[:police_station][:fax]
+    @g.police_stations << @p
+    redirect_to request.referrer, notice: "New police station added ..."
   end
 
   # PATCH/PUT /governorates/1

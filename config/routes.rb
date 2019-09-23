@@ -12,7 +12,8 @@ Rails.application.routes.draw do
   root to: "habib#principal"
   devise_for :users, skip: [:sessions]
   post '/governorates/add_police_station' , to: 'governorates#add_police_station'
-  post '/governorates/insert'
+  post '/governorates/insert' , to: 'governorates#insert'
+    #post 'governorates/:id/insert'
   get 'governorates/new_police_station'
   
   

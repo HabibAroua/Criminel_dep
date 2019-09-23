@@ -1,3 +1,11 @@
+<script>
+  $(
+    function()
+    {
+      $("#hide").hide();
+    }
+   );
+</script>
 <br>
 <br>
 <br>
@@ -26,17 +34,19 @@
 
 <!-- Add police station  -->
 <h1>Add new police station</h1>
-<%= form_tag :action => "insert" do %>
-<p><label for="book_title">Address</label>
-  <%= text_field 'police_station', 'address' %></p>
-  <p><label for="book_title">Address</label>
-  <%= text_field 'police_station', 'postal_code' %></p>
-  <p><label for="book_title">Code Postal</label>
-  <%= text_field 'police_station', 'telephone' %></p>
-  <p><label for="book_title">Telephone</label>
-  <%= number_field 'police_station', 'fax' %></p>
-  <p><label for="book_options">Options</label><br/>
-  <%= submit_tag "Create" %>
+<%= form_tag :action => "insert"  do %>
+  <div id="hide">
+    <%= text_field 'id' ,'id' , :value=>@governorate.id  %></p>
+  </div>
+  <p><label for='address'>Address</label>
+  <%= text_field 'police_station', 'address' , :id=>"address" %></p>
+  <p><label for="postal_code">Postal code</label>
+  <%= number_field 'police_station', 'postal_code', :id=>"postal_code" %></p>
+  <p><label for="telephone">Telephone</label>
+  <%= text_field 'police_station', 'telephone' , :id=>"telephone" %></p>
+  <p><label for="fax">Fax</label>
+  <%= text_field 'police_station', 'fax' , :id=>"fax" %></p>
+  <%= submit_tag "Create"  %>
 <% end %>
 
 
