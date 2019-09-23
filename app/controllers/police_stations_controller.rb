@@ -57,10 +57,6 @@ class PoliceStationsController < ApplicationController
     @police_station.destroy
     flash.now[:notice] = 'Police station deleted ...'
     redirect_to request.referrer, notice: "Police station deleted ..."
-    #respond_to do |format|
-      #format.html { redirect_to police_stations_url, notice: 'Police station was successfully destroyed.' }
-      #format.json { head :no_content }
-    #end
   end
 
   private
