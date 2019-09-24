@@ -37,14 +37,24 @@
   <div id="hide">
     <%= text_field 'id' ,'id' , :value=>@governorate.id  %></p>
   </div>
-  <p><label for='address'>Address</label>
-  <%= text_field 'police_station', 'address' , :id=>"address" %></p>
-  <p><label for="postal_code">Postal code</label>
-  <%= number_field 'police_station', 'postal_code', :id=>"postal_code" , :max=>9999 , :min=>1000 %></p>
-  <p><label for="telephone">Telephone</label>
-  <%= text_field 'police_station', 'telephone' , :id=>"telephone" %></p>
-  <p><label for="fax">Fax</label>
-  <%= text_field 'police_station', 'fax' , :id=>"fax" %></p>
+  <table>
+    <tr>
+      <td><p><label for='address'>Address</label></td>
+      <td><%= text_field 'police_station', 'address' , :id=>"address" %></p></td>
+    </tr>
+    <tr>
+      <td><p><label for="postal_code">Postal code</label></td>
+      <td><%= number_field 'police_station', 'postal_code', :id=>"postal_code" , :max=>9999 , :min=>1000 %></p></td>
+    </tr>
+    <tr>
+      <td><p><label for="telephone">Telephone</label></td>
+      <td><%= text_field 'police_station', 'telephone' , :id=>"telephone" %></p></td>
+    </tr>
+    <tr>
+      <td><p><label for="fax">Fax</label></td>
+      <td><%= text_field 'police_station', 'fax' , :id=>"fax" %></p></td>
+    </tr>
+  </table>
   <%= submit_tag "Create"  %>
 <% end %>
 
