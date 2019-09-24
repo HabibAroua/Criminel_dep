@@ -34,8 +34,10 @@
 <!-- Add police station  -->
 <div class="container">
 		<div class="row">
-      <div class="col-lg-6 col-md-6 col-sm-xs-6">
-        <h1>Add new police station</h1>
+      <div class="col-lg-4 col-md-4 col-sm-xs-4">
+        <center>
+          <h3>Add new police station</h3>
+        </center>
         <%= form_tag :action => "insert"  do %>
           <div id="hide">
             <%= text_field 'id' ,'id' , :value=>@governorate.id  %></p>
@@ -61,12 +63,12 @@
           <%= submit_tag "Create"  %>
         <% end %>
       </div>
-      <div class="col-lg-6 col-md-6 col-sm-xs-6">
+      <div class="col-lg-8 col-md-8 col-sm-xs-8">
         <!-- end of block -->
         <center>
-          <h1>Police Stations</h1>
+          <h3>Police Stations</h3>
         </center>
-        <table class="table table-striped table-dark">
+        <table class="table table-striped table-dark" style="width: 100%;">
           <thead>
             <tr>
               <th>Address</th>
