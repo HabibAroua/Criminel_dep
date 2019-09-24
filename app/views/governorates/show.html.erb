@@ -10,27 +10,26 @@
 <br>
 <br>
 <br>
-<h1>Gouvernorate</h1>
-<p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Name:</strong>
-  <%= @governorate.name %>
-</p>
-
-<p>
-  <strong>Population:</strong>
-  <%= @governorate.population %>
-</p>
-
-<p>
-  <strong>Zone:</strong>
-  <%= @governorate.zone %>
-</p>
-
-<%= link_to 'Edit', edit_governorate_path(@governorate) %> |
-<%= link_to 'Back', governorates_path %>
-
+<center>
+  <h1>Gouvernorate</h1>
+  <p id="notice"><%= notice %></p>
+  <table>
+    <tr>
+      <strong>Name:</strong>
+      <%= @governorate.name %>
+    </tr>
+    <tr>
+      <td><strong>Population:</strong></td>
+      <td> <%= @governorate.population %></td>
+    </tr>
+    <tr>
+      <td><strong>Zone:</strong></td>
+      <td><%= @governorate.zone %></td>
+    </tr>
+  </table>
+  <%= link_to 'Edit', edit_governorate_path(@governorate) %> |
+  <%= link_to 'Back', governorates_path %>
+</center>
 
 <!-- Add police station  -->
 <h1>Add new police station</h1>
