@@ -13,18 +13,18 @@
 <center>
   <h1>Gouvernorate</h1>
   <p id="notice"><%= notice %></p>
-  <table>
-    <tr>
-      <strong>Name:</strong>
-      <%= @governorate.name %>
+  <table style="border-collapse: collapse; border: 1px solid black; width: 50%; text-align: center;">
+    <tr style="border: 1px solid black;">
+      <td style="border: 1px solid black;"><strong>Name:</strong></td>
+      <td style="border: 1px solid black;"><%= @governorate.name %></td>
     </tr>
     <tr>
-      <td><strong>Population:</strong></td>
-      <td> <%= @governorate.population %></td>
+      <td style="border: 1px solid black;"><strong>Population:</strong></td>
+      <td style="border: 1px solid black;"> <%= @governorate.population %></td>
     </tr>
-    <tr>
-      <td><strong>Zone:</strong></td>
-      <td><%= @governorate.zone %></td>
+    <tr style="border: 1px solid black;">
+      <td style="border: 1px solid black;"><strong>Zone:</strong></td>
+      <td style="border: 1px solid black;"><%= @governorate.zone %></td>
     </tr>
   </table>
   <%= link_to 'Edit', edit_governorate_path(@governorate) %> |
@@ -32,56 +32,64 @@
 </center>
 
 <!-- Add police station  -->
-<h1>Add new police station</h1>
-<%= form_tag :action => "insert"  do %>
-  <div id="hide">
-    <%= text_field 'id' ,'id' , :value=>@governorate.id  %></p>
-  </div>
-  <table>
-    <tr>
-      <td><p><label for='address'>Address</label></td>
-      <td><%= text_field 'police_station', 'address' , :id=>"address" %></p></td>
-    </tr>
-    <tr>
-      <td><p><label for="postal_code">Postal code</label></td>
-      <td><%= number_field 'police_station', 'postal_code', :id=>"postal_code" , :max=>9999 , :min=>1000 %></p></td>
-    </tr>
-    <tr>
-      <td><p><label for="telephone">Telephone</label></td>
-      <td><%= text_field 'police_station', 'telephone' , :id=>"telephone" %></p></td>
-    </tr>
-    <tr>
-      <td><p><label for="fax">Fax</label></td>
-      <td><%= text_field 'police_station', 'fax' , :id=>"fax" %></p></td>
-    </tr>
-  </table>
-  <%= submit_tag "Create"  %>
-<% end %>
-
-<!-- end of block -->
-<h1>Police Stations</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Address</th>
-      <th>Postal code</th>
-      <th>Telephone</th>
-      <th>Fax</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-  <tbody>
-    <% @police_stations.each do |police_station| %>
-      <tr>
-        <td><%= police_station.address %></td>
-        <td><%= police_station.postal_code %></td>
-        <td><%= police_station.telephone %></td>
-        <td><%= police_station.fax %></td>
-        <td><%= link_to 'Show', police_station %></td>
-        <td><%= link_to 'Edit', edit_police_station_path(police_station) %></td>
-        <td><%= link_to 'Destroy', police_station, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+<div class="container">
+		<div class="row">
+      <div class="col-lg-6 col-md-6 col-sm-xs-6">
+        <h1>Add new police station</h1>
+        <%= form_tag :action => "insert"  do %>
+          <div id="hide">
+            <%= text_field 'id' ,'id' , :value=>@governorate.id  %></p>
+          </div>
+          <table>
+            <tr>
+              <td><p><label for='address'>Address</label></td>
+              <td><%= text_field 'police_station', 'address' , :id=>"address" , class:"form-control" %></p></td>
+            </tr>
+            <tr>
+              <td><p><label for="postal_code">Postal code</label></td>
+              <td><%= number_field 'police_station', 'postal_code', :id=>"postal_code" , :max=>9999 , :min=>1000 , class:"form-control" %></p></td>
+            </tr>
+            <tr>
+              <td><p><label for="telephone">Telephone</label></td>
+              <td><%= telephone_field 'police_station', 'telephone' , :id=>"telephone" , class:"form-control" %></p></td>
+            </tr>
+            <tr>
+              <td><p><label for="fax">Fax</label></td>
+              <td><%= telephone_field 'police_station', 'fax' , :id=>"fax" , class:"form-control" %></p></td>
+            </tr>
+          </table>
+          <%= submit_tag "Create"  %>
+        <% end %>
+      </div>
+      <div class="col-lg-6 col-md-6 col-sm-xs-6">
+        <!-- end of block -->
+        <center>
+          <h1>Police Stations</h1>
+        </center>
+        <table class="table table-striped table-dark">
+          <thead>
+            <tr>
+              <th>Address</th>
+              <th>Postal</th>
+              <th>Telephone</th>
+              <th>Fax</th>
+              <th colspan="3"></th>
+            </tr>
+          </thead>
+          <tbody>
+            <% @police_stations.each do |police_station| %>
+              <tr>
+                <td><%= police_station.address %></td>
+                <td><%= police_station.postal_code %></td>
+                <td><%= police_station.telephone %></td>
+                <td><%= police_station.fax %></td>
+                <td><%= link_to 'Show', police_station %></td>
+                <td><%= link_to 'Edit', edit_police_station_path(police_station) %></td>
+                <td><%= link_to 'Destroy', police_station, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
+      </div>
+    </div>
+</div>
