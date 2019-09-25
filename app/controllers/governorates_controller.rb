@@ -32,15 +32,14 @@ class GovernoratesController < ApplicationController
   def create
     @governorate = Governorate.new(governorate_params)
 
-    respond_to do |format|
-      if @governorate.save
-        format.html { redirect_to @governorate, notice: 'Governorate was successfully created.' }
-        format.json { render :show, status: :created, location: @governorate }
-      else
-        format.html { render :new }
-        format.json { render json: @governorate.errors, status: :unprocessable_entity }
-      end
-    end
+    #respond_to do |format|
+    @governorate.save
+    redirect_to governorates_path #correct the redirect
+    #  else
+    #    format.html { render :new }
+    #    format.json { render json: @governorate.errors, status: :unprocessable_entity }
+    #  end
+    #end
   end
   
   def insert
