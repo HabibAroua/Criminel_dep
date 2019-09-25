@@ -74,20 +74,28 @@
 </center>
 <table id="example">
   <thead>
-    <tr><th>Address</th><th>Postal </th><th>Telephone</th><th>Fax</th><th>Show</th><th>Edit</th><th>Delete</th></tr>
+    <tr>
+      <th>Address</th>
+      <th>Postal</th>
+      <th>Telephone</th>
+      <th>Fax</th>
+      <th>Show</th>
+      <th>Edit</th>
+      <th>Delete</th>
+    </tr>
   </thead>
   <tbody>
     <% @police_stations.each do |police_station| %>
-              <tr>
-                <td><%= police_station.address %></td>
-                <td><%= police_station.postal_code %></td>
-                <td><%= police_station.telephone %></td>
-                <td><%= police_station.fax %></td>
-                <td><%= link_to 'Show', police_station %></td>
-                <td><%= link_to 'Edit', edit_police_station_path(police_station) %></td>
-                <td><%= link_to 'Destroy', police_station, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-              </tr>
-            <% end %>
+       <tr>
+        <td><%= police_station.address %></td>
+        <td><%= police_station.postal_code %></td>
+        <td><%= police_station.telephone %></td>
+        <td><%= police_station.fax %></td>
+        <td><%= link_to 'Show', police_station %></td>
+        <td><%= link_to 'Edit', edit_police_station_path(police_station) %></td>
+         <td><%= link_to 'Destroy', police_station, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
   </tbody>
 </table>
 <button id="bt_show_add_police_station">Add new police station</button>
