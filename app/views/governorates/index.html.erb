@@ -22,16 +22,26 @@
         <td><%= governorate.name %></td>
         <td><%= governorate.population %></td>
         <td><%= governorate.zone %></td>
-        <td><center><%= link_to '', governorate , class:"glyphicon glyphicon-eye-open" %></center></td>
-        <td><center><%= link_to '', edit_governorate_path(governorate) , class:"glyphicon glyphicon-pencil" %></center></td>
-        <td><center><%= link_to '', governorate, method: :delete, data: { confirm: 'Are you sure?' } ,class:"glyphicon glyphicon-trash" %></center></td>
+        <td>
+          <center>
+            <%= link_to '', governorate , class:"glyphicon glyphicon-eye-open" %>
+          </center>
+        </td>
+        <td>
+          <center>
+            <%= link_to '', edit_governorate_path(governorate) , class:"glyphicon glyphicon-pencil" %>
+          </center>
+        </td>
+        <td>
+          <center>
+            <%= link_to '', governorate, method: :delete, data: { confirm: 'Are you sure?' } ,class:"glyphicon glyphicon-trash" %>
+          </center>
+        </td>
       </tr>
     <% end %>
   </tbody>
 </table>
-
 <br>
-
 <%= link_to 'New Governorate', new_governorate_path %>
 <script type="text/javascript" charset="utf8" src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.2.min.js"></script>
 <script type="text/javascript" charset="utf8" src="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/jquery.dataTables.min.js"></script>
