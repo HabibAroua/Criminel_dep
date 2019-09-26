@@ -22,9 +22,9 @@
         <td><%= governorate.name %></td>
         <td><%= governorate.population %></td>
         <td><%= governorate.zone %></td>
-        <td><%= link_to 'Show', governorate %></td>
-        <td><%= link_to 'Edit', edit_governorate_path(governorate) %></td>
-        <td><%= link_to 'Destroy', governorate, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to '', governorate , class:"glyphicon glyphicon-eye-open" %></td>
+        <td><%= link_to '', edit_governorate_path(governorate) , class:"glyphicon glyphicon-pencil" %></td>
+        <td><%= link_to '', governorate, method: :delete, data: { confirm: 'Are you sure?' } ,class:"glyphicon glyphicon-trash" %></td>
       </tr>
     <% end %>
   </tbody>
