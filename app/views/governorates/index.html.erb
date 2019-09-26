@@ -10,9 +10,9 @@
       <th>Name</th>
       <th>Population</th>
       <th>Zone</th>
-      <th>Show</th>
-      <th>Edit</th>
-      <th>Delete</th>
+      <th><center>Show</center></th>
+      <th><center>Edit</center></th>
+      <th><center>Delete</center></th>
     </tr>
   </thead>
 
@@ -22,9 +22,9 @@
         <td><%= governorate.name %></td>
         <td><%= governorate.population %></td>
         <td><%= governorate.zone %></td>
-        <td><%= link_to '', governorate , class:"glyphicon glyphicon-eye-open" %></td>
-        <td><%= link_to '', edit_governorate_path(governorate) , class:"glyphicon glyphicon-pencil" %></td>
-        <td><%= link_to '', governorate, method: :delete, data: { confirm: 'Are you sure?' } ,class:"glyphicon glyphicon-trash" %></td>
+        <td><center><%= link_to '', governorate , class:"glyphicon glyphicon-eye-open" %></center></td>
+        <td><center><%= link_to '', edit_governorate_path(governorate) , class:"glyphicon glyphicon-pencil" %></center></td>
+        <td><center><%= link_to '', governorate, method: :delete, data: { confirm: 'Are you sure?' } ,class:"glyphicon glyphicon-trash" %></center></td>
       </tr>
     <% end %>
   </tbody>
