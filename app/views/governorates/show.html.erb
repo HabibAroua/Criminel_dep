@@ -79,9 +79,9 @@
       <th>Postal</th>
       <th>Telephone</th>
       <th>Fax</th>
-      <th>Show</th>
-      <th>Edit</th>
-      <th>Delete</th>
+      <th><center>Show</center></th>
+      <th><center>Edit</center></th>
+      <th><center>Delete</center></th>
     </tr>
   </thead>
   <tbody>
@@ -91,9 +91,21 @@
         <td><%= police_station.postal_code %></td>
         <td><%= police_station.telephone %></td>
         <td><%= police_station.fax %></td>
-        <td><%= link_to 'Show', police_station %></td>
-        <td><%= link_to 'Edit', edit_police_station_path(police_station) %></td>
-         <td><%= link_to 'Destroy', police_station, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td>
+          <center>
+            <%= link_to '', police_station , class:"glyphicon glyphicon-eye-open" %>
+          </center>
+        </td>
+        <td>
+          <center>
+            <%= link_to '', edit_police_station_path(police_station) , class:"glyphicon glyphicon-pencil" %>
+          </center>
+        </td>
+        <td>
+          <center>
+            <%= link_to '', police_station, method: :delete, data: { confirm: 'Are you sure?' } , class:"glyphicon glyphicon-trash" %>
+          </center>
+        </td>
       </tr>
     <% end %>
   </tbody>
