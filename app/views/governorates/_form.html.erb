@@ -1,51 +1,53 @@
-<div style="padding-right: 1px "><div class="padding">
-	<div class="container">
-		<div class="row">
-			<div class="col-lg-6 col-md-3 col-sm-xs-12">
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <center>
-          <h3>Add new governorate</h3>
-        </center>
-        <%= form_with(model: governorate, local: true) do |form| %>
-          <% if governorate.errors.any? %>
-            <div id="error_explanation">
-              <h2><%= pluralize(governorate.errors.count, "error") %> prohibited this governorate from being saved:</h2>
-              <ul>
-              <% governorate.errors.full_messages.each do |message| %>
-                <li><%= message %></li>
-              <% end %>
-              </ul>
+<div style="padding-right: 1px ">
+  <div class="padding">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 col-md-3 col-sm-xs-12">
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <center>
+            <h3>Add new governorate</h3>
+          </center>
+          <%= form_with(model: governorate, local: true) do |form| %>
+            <% if governorate.errors.any? %>
+              <div id="error_explanation">
+                <h2><%= pluralize(governorate.errors.count, "error") %> prohibited this governorate from being saved:</h2>
+                <ul>
+                <% governorate.errors.full_messages.each do |message| %>
+                  <li><%= message %></li>
+                <% end %>
+                </ul>
+              </div>
+            <% end %>
+          
+            <div class="field">
+              <%= form.label :name %>
+              <%= form.text_field :name, id: :governorate_name , class:"form-control"%>
             </div>
-          <% end %>
-        
-          <div class="field">
-            <%= form.label :name %>
-            <%= form.text_field :name, id: :governorate_name , class:"form-control"%>
-          </div>
-        
-          <div class="field">
-            <%= form.label :population %>
-            <%= form.number_field :population, id: :governorate_population , class:"form-control" %>
-          </div>
-        
-          <div class="field">
-            <%= form.label :zone %>
-            <%= form.text_field :zone, id: :governorate_zone , class:"form-control"  %>
-          </div>
-        
-          <div class="actions">
-            <%= form.submit "Create" , class:"btn btn-lg btn-primary btn-block" %>
-          </div>
-        <% end %>        
-      </div>
-      <div class="col-lg-6 col-md-3 col-sm-xs-12">
-        <figure>
-          <%= image_tag("map_tunisia.jpg", :alt => "rss feed") %>
-        </figure>
+          
+            <div class="field">
+              <%= form.label :population %>
+              <%= form.number_field :population, id: :governorate_population , class:"form-control" %>
+            </div>
+          
+            <div class="field">
+              <%= form.label :zone %>
+              <%= form.text_field :zone, id: :governorate_zone , class:"form-control"  %>
+            </div>
+          
+            <div class="actions">
+              <%= form.submit "Create" , class:"btn btn-lg btn-primary btn-block" %>
+            </div>
+          <% end %>        
+        </div>
+        <div class="col-lg-6 col-md-3 col-sm-xs-12">
+          <figure>
+            <%= image_tag("map_tunisia.jpg", :alt => "rss feed") %>
+          </figure>
+        </div>
       </div>
     </div>
   </div>
