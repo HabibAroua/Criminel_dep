@@ -135,8 +135,12 @@
               <td><%= text_field 'police_station', 'address' , :id=>"address" , class:"form-control" %></p></td>
             </tr>
             <tr>
-              <td><p><label for="postal_code">Postal code</label></td>
-              <td><%= number_field 'police_station', 'postal_code', :id=>"postal_code" , :max=>9999 , :min=>1000 , class:"form-control" %></p></td>
+              <td>
+                <p><label for="postal_code">Postal code</label>
+              </td>
+              <td>
+                <%= number_field 'police_station', 'postal_code', :id=>"postal_code" , :max=>9999 , :min=>1000 , class:"form-control" %></p>
+              </td>
             </tr>
             <tr>
               <td><p><label for="telephone">Telephone</label></td>
