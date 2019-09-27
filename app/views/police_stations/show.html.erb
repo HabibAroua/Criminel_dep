@@ -1,24 +1,28 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Address:</strong>
-  <%= @police_station.address %>
-</p>
-
-<p>
-  <strong>Postal code:</strong>
-  <%= @police_station.postal_code %>
-</p>
-
-<p>
-  <strong>Telephone:</strong>
-  <%= @police_station.telephone %>
-</p>
-
-<p>
-  <strong>Fax:</strong>
-  <%= @police_station.fax %>
-</p>
-
-<%= link_to 'Edit', edit_police_station_path(@police_station) %> |
-<%= link_to 'Back', police_stations_path %>
+<br>
+<br>
+<br>
+<br>
+<br>
+<center>
+  <table style="border-collapse: collapse; border: 1px solid black; width: 50%; text-align: center;">
+    <tr border: 1px solid black;">
+      <td style="border: 1px solid black;"><strong>Address</strong></td>
+      <td style="border: 1px solid black;"><%= @police_station.address %></td>
+    </tr>
+    <tr style="border: 1px solid black;">
+      <td style="border: 1px solid black;"><strong>Postal code</strong></td>
+      <td style="border: 1px solid black;"><%= @police_station.postal_code %></td>
+    </tr>
+    <tr style="border: 1px solid black;">
+      <td style="border: 1px solid black;"><strong>Telephone</strong></td>
+      <td style="border: 1px solid black;"><%= @police_station.telephone %></td>
+    </tr>
+    <tr style="border: 1px solid black;">
+      <td style="border: 1px solid black;"><strong>Fax</strong></td>
+      <td style="border: 1px solid black;"><%= @police_station.fax %></td>
+    </tr>
+  </table>
+  
+  <%= link_to 'Edit', edit_police_station_path(@police_station) %> |
+  <%= link_to 'Back', police_stations_path %>
+</center>
