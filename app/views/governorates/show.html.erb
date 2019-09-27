@@ -87,26 +87,26 @@
   <tbody>
     <% @police_stations.each do |police_station| %>
        <tr>
-        <td><%= police_station.address %></td>
-        <td><%= police_station.postal_code %></td>
-        <td><%= police_station.telephone %></td>
-        <td><%= police_station.fax %></td>
-        <td>
-          <center>
-            <%= link_to '', police_station , class:"glyphicon glyphicon-eye-open" , target:"_top	" %>
-          </center>
-        </td>
-        <td>
-          <center>
-            <%= link_to '', edit_police_station_path(police_station) , class:"glyphicon glyphicon-pencil" %>
-          </center>
-        </td>
-        <td>
-          <center>
-            <%= link_to '', police_station, method: :delete, data: { confirm: 'Are you sure?' } , class:"glyphicon glyphicon-trash" %>
-          </center>
-        </td>
-      </tr>
+          <td><%= police_station.address %></td>
+          <td><%= police_station.postal_code %></td>
+          <td><%= police_station.telephone %></td>
+          <td><%= police_station.fax %></td>
+          <td>
+            <center>
+              <%= link_to '', police_station , class:"glyphicon glyphicon-eye-open" , target:"_top	" %>
+            </center>
+          </td>
+          <td>
+            <center>
+              <%= link_to '', edit_police_station_path(police_station) , class:"glyphicon glyphicon-pencil" %>
+            </center>
+          </td>
+          <td>
+            <center>
+              <%= link_to '', police_station, method: :delete, data: { confirm: 'Are you sure?' } , class:"glyphicon glyphicon-trash" %>
+            </center>
+          </td>
+       </tr>
     <% end %>
   </tbody>
 </table>
