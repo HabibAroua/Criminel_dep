@@ -1,37 +1,56 @@
-<%= form_with(model: police_station, local: true) do |form| %>
-  <% if police_station.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(police_station.errors.count, "error") %> prohibited this police_station from being saved:</h2>
-
-      <ul>
-      <% police_station.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
+<br>
+<br>
+<br>
+<div style="padding-right: 1px ">
+  <div class="padding">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 col-md-6 col-sm-xs-6">
+          <%= form_with(model: police_station, local: true) do |form| %>
+            <% if police_station.errors.any? %>
+              <div id="error_explanation">
+                <h2><%= pluralize(police_station.errors.count, "error") %> prohibited this police_station from being saved:</h2>
+          
+                <ul>
+                <% police_station.errors.full_messages.each do |message| %>
+                  <li><%= message %></li>
+                <% end %>
+                </ul>
+              </div>
+            <% end %>
+          
+            <div class="field">
+              <%= form.label :address %><br>
+              <%= form.text_field :address, id: :police_station_address , class:"form-control" %>
+            </div>
+          
+            <div class="field">
+              <%= form.label :postal_code %><br>
+              <%= form.number_field :postal_code, id: :police_station_postal_code , class:"form-control"%>
+            </div>
+          
+            <div class="field">
+              <%= form.label :telephone %><br>
+              <%= form.text_field :telephone, id: :police_station_telephone , class:"form-control" %>
+            </div>
+          
+            <div class="field">
+              <%= form.label :fax %><br>
+              <%= form.text_field :fax, id: :police_station_fax , class:"form-control" %>
+            </div>
+          
+            <div class="actions">
+              <%= form.submit %>
+            </div>
+          <% end %>
+        </div>
+        <div>
+          <figure>
+            <%= image_tag("etat.png", :alt => "rss feed" , class:"float-right") %>
+          </figure>      
+        </div>
+      </div>
     </div>
-  <% end %>
-
-  <div class="field">
-    <%= form.label :address %>
-    <%= form.text_field :address, id: :police_station_address %>
   </div>
+</div>
 
-  <div class="field">
-    <%= form.label :postal_code %>
-    <%= form.number_field :postal_code, id: :police_station_postal_code %>
-  </div>
-
-  <div class="field">
-    <%= form.label :telephone %>
-    <%= form.text_field :telephone, id: :police_station_telephone %>
-  </div>
-
-  <div class="field">
-    <%= form.label :fax %>
-    <%= form.text_field :fax, id: :police_station_fax %>
-  </div>
-
-  <div class="actions">
-    <%= form.submit %>
-  </div>
-<% end %>
