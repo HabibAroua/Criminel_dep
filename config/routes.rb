@@ -4,7 +4,10 @@ Rails.application.routes.draw do
   resources :governorates
   resources :posts
   #devise_for :users
-  devise_for :users, controllers: { registrations: 'users/registrations', sessions: 'users/sessions' }
+  devise_for :users, controllers:
+  {
+    registrations: 'users/registrations', sessions: 'users/sessions'
+  }
   get 'users/sign_in'
   get 'habib/login'
   get 'habib/principal'
