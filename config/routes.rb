@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :cases
   resources :police_stations
   resources :governorates
   resources :posts
