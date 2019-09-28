@@ -1,5 +1,5 @@
 class CreateTheCases < ActiveRecord::Migration[5.1]
-  
+
   def up
     create_table :the_cases do |t|
       t.string :title
@@ -14,7 +14,7 @@ class CreateTheCases < ActiveRecord::Migration[5.1]
       t.timestamps
     end
   end
-  
+
   def down
     drop_table :the_cases
   end
