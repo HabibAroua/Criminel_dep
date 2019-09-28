@@ -18,19 +18,23 @@
   </thead>
 
   <tbody>
-    <% @cases.each do |case| %>
+    <% @cases.each do |ca| %>
       <tr>
-        <td><%= case.titile %></td>
-        <td><%= case.type %></td>
-        <td><%= case.complainant_cin %></td>
-        <td><%= case.complainant_first_name %></td>
-        <td><%= case.complainant_last_name %></td>
-        <td><%= case.complainant_telephone %></td>
-        <td><%= case.location %></td>
-        <td><%= case.address %></td>
-        <td><%= link_to 'Show', case %></td>
-        <td><%= link_to 'Edit', edit_case_path(case) %></td>
-        <td><%= link_to 'Destroy', case, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= ca.titile %></td>
+        <td><%= ca.type %></td>
+        <td><%= ca.complainant_cin %></td>
+        <td><%= ca.complainant_first_name %></td>
+        <td><%= ca.complainant_last_name %></td>
+        <td><%= ca.complainant_telephone %></td>
+        <td><%= ca.location %></td>
+        <td><%= ca.address %></td>
+        <td><%= link_to 'Show', ca %></td>
+        <td>
+          <%= link_to 'Edit', edit_case_path(ca) %>
+        </td>
+        <td>
+          <%= link_to 'Destroy', ca, method: :delete, data: { confirm: 'Are you sure?' } %>
+        </td>
       </tr>
     <% end %>
   </tbody>

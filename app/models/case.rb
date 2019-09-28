@@ -1,2 +1,2 @@
-class Case < ApplicationRecord
+class Cases < ApplicationRecord
 end

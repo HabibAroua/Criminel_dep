@@ -1,0 +1,57 @@
+<%= form_with(model: the_case, local: true) do |form| %>
+  <% if the_case.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(the_case.errors.count, "error") %> prohibited this the_case from being saved:</h2>
+
+      <ul>
+      <% the_case.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :titile %>
+    <%= form.text_field :titile, id: :the_case_titile %>
+  </div>
+
+  <div class="field">
+    <%= form.label :type %>
+    <%= form.text_field :type, id: :the_case_type %>
+  </div>
+
+  <div class="field">
+    <%= form.label :complainant_cin %>
+    <%= form.text_field :complainant_cin, id: :the_case_complainant_cin %>
+  </div>
+
+  <div class="field">
+    <%= form.label :complainant_first_name %>
+    <%= form.text_field :complainant_first_name, id: :the_case_complainant_first_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :complainant_last_name %>
+    <%= form.text_field :complainant_last_name, id: :the_case_complainant_last_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :complainant_telephone %>
+    <%= form.text_field :complainant_telephone, id: :the_case_complainant_telephone %>
+  </div>
+
+  <div class="field">
+    <%= form.label :location %>
+    <%= form.text_field :location, id: :the_case_location %>
+  </div>
+
+  <div class="field">
+    <%= form.label :address %>
+    <%= form.text_field :address, id: :the_case_address %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

@@ -10,11 +10,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190928205221) do
+ActiveRecord::Schema.define(version: 20190928212933) do
 
   create_table "cases", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
     t.string "title", limit: 50
-    t.string "type", limit: 50
+    t.string "type_case", limit: 50
     t.string "complainant_cin", limit: 8
     t.string "complainant_first_name", limit: 30
     t.string "complainant_last_name", limit: 30
@@ -48,6 +48,19 @@ ActiveRecord::Schema.define(version: 20190928205221) do
     t.string "name"
     t.string "title"
     t.text "content"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "the_cases", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
+    t.string "title"
+    t.string "type_case"
+    t.string "complainant_cin"
+    t.string "complainant_first_name"
+    t.string "complainant_last_name"
+    t.string "complainant_telephone"
+    t.string "location"
+    t.string "address"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

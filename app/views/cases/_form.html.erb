@@ -1,10 +1,12 @@
-<%= form_with(model: case, local: true) do |form| %>
-  <% if case.errors.any? %>
+<%= form_with(model: cases, local: true) do |form| %>
+  <% if cases.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(case.errors.count, "error") %> prohibited this case from being saved:</h2>
+      <h2>
+        <%= pluralize(cases.errors.count, "error") %>
+        prohibited this case from being saved:</h2>
 
       <ul>
-      <% case.errors.full_messages.each do |message| %>
+      <% cases.errors.full_messages.each do |message| %>
         <li><%= message %></li>
       <% end %>
       </ul>
@@ -17,8 +19,8 @@
   </div>
 
   <div class="field">
-    <%= form.label :type %>
-    <%= form.text_field :type, id: :case_type %>
+    <%= form.label :type_case %>
+    <%= form.text_field :type_case, id: :type_case %>
   </div>
 
   <div class="field">

@@ -4,7 +4,7 @@ class CasesController < ApplicationController
   # GET /cases
   # GET /cases.json
   def index
-    @cases = Case.all
+    @cases = Cases.all
   end
 
   # GET /cases/1
@@ -14,7 +14,7 @@ class CasesController < ApplicationController
 
   # GET /cases/new
   def new
-    @case = Case.new
+    @case = Cases.new
   end
 
   # GET /cases/1/edit
@@ -24,7 +24,7 @@ class CasesController < ApplicationController
   # POST /cases
   # POST /cases.json
   def create
-    @case = Case.new(case_params)
+    @case = Cases.new(case_params)
 
     respond_to do |format|
       if @case.save
@@ -64,7 +64,7 @@ class CasesController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_case
-      @case = Case.find(params[:id])
+      @case = Cases.find(params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

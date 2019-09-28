@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Titile:</strong>
+  <%= @the_case.titile %>
+</p>
+
+<p>
+  <strong>Type:</strong>
+  <%= @the_case.type %>
+</p>
+
+<p>
+  <strong>Complainant cin:</strong>
+  <%= @the_case.complainant_cin %>
+</p>
+
+<p>
+  <strong>Complainant first name:</strong>
+  <%= @the_case.complainant_first_name %>
+</p>
+
+<p>
+  <strong>Complainant last name:</strong>
+  <%= @the_case.complainant_last_name %>
+</p>
+
+<p>
+  <strong>Complainant telephone:</strong>
+  <%= @the_case.complainant_telephone %>
+</p>
+
+<p>
+  <strong>Location:</strong>
+  <%= @the_case.location %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @the_case.address %>
+</p>
+
+<%= link_to 'Edit', edit_the_case_path(@the_case) %> |
+<%= link_to 'Back', the_cases_path %>

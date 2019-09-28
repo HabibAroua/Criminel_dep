@@ -1,0 +1,41 @@
+<p id="notice"><%= notice %></p>
+
+<h1>The Cases</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Titile</th>
+      <th>Type</th>
+      <th>Complainant cin</th>
+      <th>Complainant first name</th>
+      <th>Complainant last name</th>
+      <th>Complainant telephone</th>
+      <th>Location</th>
+      <th>Address</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @the_cases.each do |the_case| %>
+      <tr>
+        <td><%= the_case.titile %></td>
+        <td><%= the_case.type %></td>
+        <td><%= the_case.complainant_cin %></td>
+        <td><%= the_case.complainant_first_name %></td>
+        <td><%= the_case.complainant_last_name %></td>
+        <td><%= the_case.complainant_telephone %></td>
+        <td><%= the_case.location %></td>
+        <td><%= the_case.address %></td>
+        <td><%= link_to 'Show', the_case %></td>
+        <td><%= link_to 'Edit', edit_the_case_path(the_case) %></td>
+        <td><%= link_to 'Destroy', the_case, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New The Case', new_the_case_path %>
