@@ -21,6 +21,7 @@ ActiveRecord::Schema.define(version: 20190922110654) do
   end
 
   create_table "police_stations", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
+    t.string "title", limit: 60
     t.string "address", limit: 50
     t.integer "postal_code"
     t.string "telephone", limit: 8

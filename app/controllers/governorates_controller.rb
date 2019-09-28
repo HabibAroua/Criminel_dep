@@ -45,6 +45,7 @@ class GovernoratesController < ApplicationController
   def insert
     @g=Governorate.find_by_id(params[:id][:id])
     @p=PoliceStation.new
+    @p.title=params[:police_station][:title]
     @p.address=params[:police_station][:address]
     @p.postal_code=params[:police_station][:postal_code]
     @p.telephone=params[:police_station][:telephone]

@@ -62,11 +62,12 @@ class PoliceStationsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_police_station
-      @police_station = PoliceStation.find(params[:id])
+      @police_station = PoliceStation.find_by_id(params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def police_station_params
-      params.require(:police_station).permit(:address, :postal_code, :telephone, :fax)
+      params.require(:police_station).permit(:title , :address , :postal_code, :telephone, :fax)
     end
+    
 end
