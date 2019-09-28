@@ -10,7 +10,7 @@ class CreateTheCases < ActiveRecord::Migration[5.1]
       t.string :complainant_telephone
       t.string :location
       t.string :address
-      #times
+      #times update and date added
       t.timestamps
     end
   end
