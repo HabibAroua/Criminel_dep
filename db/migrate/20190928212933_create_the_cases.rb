@@ -18,4 +18,5 @@ class CreateTheCases < ActiveRecord::Migration[5.1]
   def down
     drop_table :the_cases
   end
+  
 end
