@@ -6,7 +6,18 @@ class PoliceStationsController < ApplicationController
   def index
     @police_stations = PoliceStation.all
   end
+  
+   def insert
+    @p=PoliceStation.find_by_id(params[:id][:id])
+    
+    @title=params[:the_case][:title]
+    if @title == "habib"
+      redirect_to 'https://www.instagram.com/'
+    end
+   end
+   
 
+   
   # GET /police_stations/1
   # GET /police_stations/1.json
   def show
@@ -27,7 +38,6 @@ class PoliceStationsController < ApplicationController
   # POST /police_stations.json
   def create
     @police_station = PoliceStation.new(police_station_params)
-
     respond_to do |format|
       if @police_station.save
         format.html { redirect_to @police_station, notice: 'Police station was successfully created.' }
@@ -38,7 +48,9 @@ class PoliceStationsController < ApplicationController
       end
     end
   end
-
+  
+ 
+  
   # PATCH/PUT /police_stations/1
   # PATCH/PUT /police_stations/1.json
   def update
@@ -60,6 +72,7 @@ class PoliceStationsController < ApplicationController
     flash.now[:notice] = 'Police station deleted ...'
     redirect_to request.referrer, notice: "Police station deleted ..."
   end
+  
 
   private
     # Use callbacks to share common setup or constraints between actions.

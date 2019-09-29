@@ -17,6 +17,7 @@ Rails.application.routes.draw do
   devise_for :users, skip: [:sessions]
   post '/governorates/add_police_station' , to: 'governorates#add_police_station'
   post '/governorates/insert' , to: 'governorates#insert'
+  post '/police_stations/insert' , to: 'police_stations#insert'
     #post 'governorates/:id/insert'
   get 'governorates/new_police_station'
   

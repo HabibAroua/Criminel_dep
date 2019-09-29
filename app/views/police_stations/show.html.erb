@@ -3,6 +3,14 @@
 <br>
 <br>
 <br>
+<script>
+  $(
+    function()
+    {
+      $("#hide").hide();
+    }
+   );
+</script>
 <center>
   <h1><%= @police_station.title %></h1>
   <table style="border-collapse: collapse; border: 1px solid black; width: 50%; text-align: center;">
@@ -68,6 +76,81 @@
     <% end %>
   </tbody>
 </table>
+<button id="bt_show_add_police_station">
+  Add new police station
+</button>
+<button id="bt_hide_add_police_station">
+  Hide
+</button>
+<!-- Add case  -->
+<div class="container">
+		<div class="row">
+      <div class="col-lg-4 col-md-4 col-sm-xs-4" id="add_the_case">
+        <center>
+          <h3>
+            Add new case
+          </h3>
+        </center>
+        <%= form_tag :action => "insert"  do %>
+          <div id="hide">
+            <%= text_field 'id' ,'id' , :value=>@police_station.id  %></p>
+          </div>
+          <table>
+            <tr>
+              <td><p><label for='title'>Title</label></td>
+              <td>
+                <%= text_field 'the_case', 'title' , :id=>"title" , class:"form-control" %></p>
+              </td>
+            </tr>
+            <tr>
+              <td><p><label for='type_case'>Type case</label></td>
+              <td>
+                <%= text_field 'the_case', 'type_case' , :id=>"type_case" , class:"form-control" %></p>
+              </td>
+            </tr>
+            <tr>
+              <td><p><label for='complainant_cin'>Complainant CIN</label></td>
+              <td>
+                <%= text_field 'the_case', 'complainant_cin' , :id=>"complainant_cin" , class:"form-control" %></p>
+              </td>
+            </tr>
+            <tr>
+              <td><p><label for='complainant_first_name'>Complainant first name</label></td>
+              <td>
+                <%= text_field 'the_case', 'complainant_first_name' , :id=>"complainant_first_name" , class:"form-control" %></p>
+              </td>
+            </tr>
+            <tr>
+              <td><p><label for='complainant_last_name'>Complainant last name</label></td>
+              <td>
+                <%= text_field 'the_case', 'complainant_last_name' , :id=>"complainant_last_name" , class:"form-control" %></p>
+              </td>
+            </tr>
+            <tr>
+              <td><p><label for='complainant_telephone'>Complainant telephone</label></td>
+              <td>
+                <%= text_field 'the_case', 'complainant_telephone' , :id=>"complainant_telephone" , class:"form-control" %></p>
+              </td>
+            </tr>
+            <tr>
+              <td><p><label for='location'>Location</label></td>
+              <td>
+                <%= text_field 'the_case', 'location' , :id=>"location" , class:"form-control" %></p>
+              </td>
+            </tr>
+            <tr>
+              <td><p><label for='address'>Address</label></td>
+              <td>
+                <%= text_field 'the_case','address' , :id=>'address' , class:"from-control" %></p>
+              </td>
+            </tr>
+          </table>
+          <%= submit_tag "Create" , class:"btn btn-lg btn-primary btn-block" %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
 <!-- using javascript -->
 <script type="text/javascript" charset="utf8" src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.2.min.js"></script>
 <script type="text/javascript" charset="utf8" src="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/jquery.dataTables.min.js"></script>
