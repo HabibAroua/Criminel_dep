@@ -9,11 +9,17 @@ class PoliceStationsController < ApplicationController
   
    def insert
     @p=PoliceStation.find_by_id(params[:id][:id])
-    
-    @title=params[:the_case][:title]
-    if @title == "habib"
-      redirect_to 'https://www.instagram.com/'
-    end
+    @the_case=TheCase.new
+    @the_case.title=params[:the_case][:title]
+    @the_case.type_case=params[:the_case][:type_case]
+    @the_case.complainant_cin=params[:the_case][:complainant_cin]
+    @the_case.complainant_first_name=params[:the_case][:complainant_first_name]
+    @the_case.complainant_last_name=params[:the_case][:complainant_last_name]
+    @the_case.complainant_telephone=params[:the_case][:complainant_telephone]
+    @the_case.location=params[:the_case][:location]
+    @the_case.address=params[:the_case][:address]
+    @p.the_cases << @the_case
+    redirect_to request.referrer, notice: "New case added ..."
    end
    
 
