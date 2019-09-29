@@ -61,6 +61,7 @@ ActiveRecord::Schema.define(version: 20190928212933) do
     t.string "complainant_telephone"
     t.string "location"
     t.string "address"
+    t.integer "police_station_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
