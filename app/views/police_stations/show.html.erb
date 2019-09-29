@@ -89,20 +89,67 @@
 <table class="table table-striped table-dark" id="example">
   <thead>
     <tr>
-      <th>Title</th>
-      <th>Type</th>
-      <th>Complainant cin</th>
-      <th>Complainant first name</th>
-      <th>Complainant last name</th>
-      <th>Complainant telephone</th>
-      <th>Location</th>
-      <th>Address</th>
-      <th>Show</th>
-      <th>Edit</th>
-      <th>Delete</th>
+      <th>
+        <center>
+          Title
+        </center></th>
+      <th>
+        <center>
+          Type
+        </center>
+      </th>
+      <th>
+        <center>
+          Complainant cin
+        </center>
+      </th>
+      <th>
+        <center>
+          Complainant first name
+        </center>
+      </th>
+      <th>
+        <center>
+          Complainant last name
+        </center>
+      </th>
+      <th>
+        <center>
+          Complainant telephone
+        </center>
+      </th>
+      <th>
+        <center>
+          Location
+        </center>
+      </th>
+      <th>
+        <center>
+          Address
+        </center>
+      </th>
+      <th>
+        <center>
+          Duration
+        </center>
+      </th>
+      <th>
+        <center>
+          Show
+        </center>
+      </th>
+      <th>
+        <center>
+          Edit
+        </center>
+      </th>
+      <th>
+        <center>
+          Delete
+        </center>
+      </th>
     </tr>
   </thead>
-
   <tbody>
     <% @the_cases.each do |the_case| %>
       <tr>
@@ -114,6 +161,7 @@
         <td><%= the_case.complainant_telephone %></td>
         <td><%= the_case.location %></td>
         <td><%= the_case.address %></td>
+        <td><%= time_ago_in_words(the_case.created_at) %></td>
         <td><%= link_to 'Show', the_case %></td>
         <td><%= link_to 'Edit', edit_the_case_path(the_case) %></td>
         <td><%= link_to 'Destroy', the_case, method: :delete, data: { confirm: 'Are you sure?' } %></td>
