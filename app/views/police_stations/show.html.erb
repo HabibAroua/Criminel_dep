@@ -10,6 +10,51 @@
       $("#hide").hide();
     }
    );
+  
+   $(
+    function()
+    {
+      $('#add_case').hide();
+    }
+  );
+  $(
+    function()
+    {
+      $("#bt_hide_add_case").hide();
+    }
+  );
+  
+  $(document).ready
+	(
+		function()
+		{
+			$("#bt_show_add_case").click
+			(
+				function()
+				{
+					$("#add_case").show();
+          $("#bt_show_add_case").hide();
+          $("#bt_hide_add_case").show();
+				}
+			);
+		}
+	);
+  
+  $(document).ready
+	(
+		function()
+		{
+			$("#bt_hide_add_case").click
+			(
+				function()
+				{
+					$("#add_case").hide();
+          $("#bt_show_add_case").show();
+          $("#bt_hide_add_case").hide();
+				}
+			);
+		}
+	);
 </script>
 <center>
   <h1><%= @police_station.title %></h1>
@@ -76,16 +121,16 @@
     <% end %>
   </tbody>
 </table>
-<button id="bt_show_add_police_station">
+<button id="bt_show_add_case">
   Add new police station
 </button>
-<button id="bt_hide_add_police_station">
+<button id="bt_hide_add_case">
   Hide
 </button>
 <!-- Add case  -->
 <div class="container">
 		<div class="row">
-      <div class="col-lg-4 col-md-4 col-sm-xs-4" id="add_the_case">
+      <div class="col-lg-4 col-md-4 col-sm-xs-4" id="add_case">
         <center>
           <h3>
             Add new case
