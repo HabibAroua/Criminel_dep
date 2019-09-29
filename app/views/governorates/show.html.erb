@@ -76,6 +76,7 @@
 <table id="example">
   <thead>
     <tr>
+      <th>Title</th>
       <th>Address</th>
       <th>Postal</th>
       <th>Telephone</th>
@@ -88,6 +89,7 @@
   <tbody>
     <% @police_stations.each do |police_station| %>
        <tr>
+          <td><%= police_station.title %></td>
           <td><%= police_station.address %></td>
           <td><%= police_station.postal_code %></td>
           <td><%= police_station.telephone %></td>
