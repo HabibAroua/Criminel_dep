@@ -10,6 +10,7 @@ class TheCasesController < ApplicationController
   # GET /the_cases/1
   # GET /the_cases/1.json
   def show
+    
   end
 
   # GET /the_cases/new

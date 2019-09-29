@@ -10,6 +10,8 @@ class PoliceStationsController < ApplicationController
   # GET /police_stations/1
   # GET /police_stations/1.json
   def show
+    @p=PoliceStation.find(params[:id])
+    @the_cases=@p.the_cases
   end
 
   # GET /police_stations/new
