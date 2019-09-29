@@ -5,7 +5,7 @@
 <table>
   <thead>
     <tr>
-      <th>Titile</th>
+      <th>Title</th>
       <th>Type</th>
       <th>Complainant cin</th>
       <th>Complainant first name</th>
@@ -20,8 +20,8 @@
   <tbody>
     <% @the_cases.each do |the_case| %>
       <tr>
-        <td><%= the_case.titile %></td>
-        <td><%= the_case.type %></td>
+        <td><%= the_case.title %></td>
+        <td><%= the_case.type_case %></td>
         <td><%= the_case.complainant_cin %></td>
         <td><%= the_case.complainant_first_name %></td>
         <td><%= the_case.complainant_last_name %></td>
