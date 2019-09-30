@@ -1,44 +1,103 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Titile:</strong>
-  <%= @the_case.title %>
-</p>
-
-<p>
-  <strong>Type:</strong>
-  <%= @the_case.type_case %>
-</p>
-
-<p>
-  <strong>Complainant cin:</strong>
-  <%= @the_case.complainant_cin %>
-</p>
-
-<p>
-  <strong>Complainant first name:</strong>
-  <%= @the_case.complainant_first_name %>
-</p>
-
-<p>
-  <strong>Complainant last name:</strong>
-  <%= @the_case.complainant_last_name %>
-</p>
-
-<p>
-  <strong>Complainant telephone:</strong>
-  <%= @the_case.complainant_telephone %>
-</p>
-
-<p>
-  <strong>Location:</strong>
-  <%= @the_case.location %>
-</p>
-
-<p>
-  <strong>Address:</strong>
-  <%= @the_case.address %>
-</p>
-
-<%= link_to 'Edit', edit_the_case_path(@the_case) %> |
-<%= link_to 'Back', the_cases_path %>
+<!--<p id="notice"><%= notice %></p>-->
+<br>
+<br>
+<br>
+<br>
+<br>
+  <center>
+    Case name :  <strong><%= @the_case.title %></strong>
+    <table class="tab">
+      <tr class="tr">
+        <td class="border: 1px solid black">
+          <strong>
+            Title:
+          </strong>
+        </td>
+        <td class="td">
+          <%= @the_case.title %>
+        </td>
+      </tr>
+      <tr class="tr">
+        <td class="td">
+          <strong>
+            Type:
+          </strong>
+        </td>
+        <td class="td">
+          <%= @the_case.type_case %>
+        </td>
+      </tr>
+      <tr class="tr">
+        <td class="td">
+          <strong>
+            Complainant cin:
+          </strong>
+        </td>
+        <td class="td">
+          <%= @the_case.complainant_cin %>
+        </td>
+      </tr>
+      <tr class="tr">
+        <td class="td">
+          <strong>
+            Complainant cin:
+          </strong>
+        </td>
+        <td class="td">
+          <%= @the_case.complainant_cin %>
+        </td>
+      </tr>
+      <tr class="tr">
+        <td class="border: 1px solid black">
+          <strong>
+            Complainant first name:
+          </strong>
+        </td>
+        <td class="td">
+          <%= @the_case.complainant_first_name %>
+        </td>
+      </tr>
+      <tr class="tr">
+        <td class="td">
+          <strong>
+            Complainant last name:
+          </strong>
+        </td>
+        <td class="td">
+          <%= @the_case.complainant_last_name %>
+        </td>
+      </tr>
+      <tr class="tr">
+        <td class="td">
+          <strong>
+            Complainant telephone:
+          </strong>
+        </td>
+        <td class="td">
+          <%= @the_case.complainant_telephone %>
+        </td>
+      </tr>
+      <tr class="tr">
+        <td class="td">
+          <strong>
+            Location:
+          </strong>
+        </td>
+        <td class="td">
+          <%= @the_case.location %>
+        </td>
+      </tr>
+      <tr class="tr">
+        <td class="td">
+          <strong>
+            Address:
+          </strong>
+        </td>
+        <td class="td">
+          <%= @the_case.address %>
+        </td>
+      </tr>
+    </table>
+  <%= link_to 'Edit', edit_the_case_path(@the_case) %> |
+  <%= link_to 'Back', the_cases_path %>
+</center>

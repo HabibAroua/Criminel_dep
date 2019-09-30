@@ -88,3 +88,21 @@ img
 	width:500px;
 	height:500px;
 }
+
+.tab
+{
+	border-collapse: collapse;
+	border: 1px solid black;
+	width: 50%;
+	text-align: center;
+}
+
+.tr
+{
+	border: 1px solid black;
+}
+
+.td
+{
+	border: 1px solid black;
+}
