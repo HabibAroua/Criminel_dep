@@ -153,18 +153,65 @@
   <tbody>
     <% @the_cases.each do |the_case| %>
       <tr>
-        <td><%= the_case.title %></td>
-        <td><%= the_case.type_case %></td>
-        <td><%= the_case.complainant_cin %></td>
-        <td><%= the_case.complainant_first_name %></td>
-        <td><%= the_case.complainant_last_name %></td>
-        <td><%= the_case.complainant_telephone %></td>
-        <td><%= the_case.location %></td>
-        <td><%= the_case.address %></td>
-        <td><%= time_ago_in_words(the_case.created_at) %></td>
-        <td><%= link_to 'Show', the_case %></td>
-        <td><%= link_to 'Edit', edit_the_case_path(the_case) %></td>
-        <td><%= link_to 'Destroy', the_case, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td>
+          <center>
+            <%= the_case.title %>
+          </center>
+        </td>
+        <td>
+          <center>
+            <%= the_case.type_case %>
+          </center>
+          </td>
+        <td>
+          <center>
+            <%= the_case.complainant_cin %>
+          </center>
+        </td>
+        <td>
+          <center>
+            <%= the_case.complainant_first_name %>
+          </center>
+          </td>
+        <td>
+          <center>
+            <%= the_case.complainant_last_name %>
+          </center>
+          </td>
+        <td>
+          <center>
+            <%= the_case.complainant_telephone %>
+          </center>
+        </td>
+        <td>
+          <center>
+            <%= the_case.location %>
+          </center>
+        </td>
+        <td>
+          <center>
+            <%= the_case.address %>
+          </center>
+        </td>
+        <td>
+          <center>
+            <%= time_ago_in_words(the_case.created_at) %>
+          </center>
+        </td>
+        <td>
+          <center>
+            <%= link_to 'Show', the_case %>
+          </center>
+        </td>
+        <td>
+          <center>
+            <%= link_to 'Edit', edit_the_case_path(the_case) %>
+          </center>
+          </td>
+        <td>
+          <center>
+            <%= link_to 'Destroy', the_case, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          </center>
       </tr>
     <% end %>
   </tbody>
