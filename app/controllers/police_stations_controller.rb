@@ -22,8 +22,6 @@ class PoliceStationsController < ApplicationController
     redirect_to request.referrer, notice: "New case added ..."
    end
    
-
-   
   # GET /police_stations/1
   # GET /police_stations/1.json
   def show
@@ -55,8 +53,6 @@ class PoliceStationsController < ApplicationController
     end
   end
   
- 
-  
   # PATCH/PUT /police_stations/1
   # PATCH/PUT /police_stations/1.json
   def update
@@ -78,7 +74,6 @@ class PoliceStationsController < ApplicationController
     flash.now[:notice] = 'Police station deleted ...'
     redirect_to request.referrer, notice: "Police station deleted ..."
   end
-  
 
   private
     # Use callbacks to share common setup or constraints between actions.
