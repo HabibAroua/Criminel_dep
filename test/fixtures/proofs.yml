@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  type_proof: MyString
+  content: MyText
+
+two:
+  type_proof: MyString
+  content: MyText

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20191002160226) do
+ActiveRecord::Schema.define(version: 20191002162649) do
 
   create_table "cases", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
     t.string "title", limit: 50
@@ -64,6 +64,13 @@ ActiveRecord::Schema.define(version: 20191002160226) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "proofs", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
+    t.string "type_proof", limit: 25
+    t.text "content"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "the_cases", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
     t.string "title"
     t.string "type_case"
@@ -96,21 +103,21 @@ ActiveRecord::Schema.define(version: 20191002160226) do
   end
 
   create_table "victims", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
-    t.string "cin"
-    t.string "first_name"
-    t.string "last_name"
-    t.string "problem"
-    t.string "cause_of_death"
+    t.string "cin", limit: 8
+    t.string "first_name", limit: 30
+    t.string "last_name", limit: 30
+    t.string "problem", limit: 20
+    t.string "cause_of_death", limit: 25
     t.date "date_of_death"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "waitnesses", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
-    t.string "cin"
-    t.string "first_name"
-    t.string "last_name"
-    t.string "telephone"
+    t.string "cin", limit: 8
+    t.string "first_name", limit: 30
+    t.string "last_name", limit: 30
+    t.string "telephone", limit: 8
     t.text "content"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

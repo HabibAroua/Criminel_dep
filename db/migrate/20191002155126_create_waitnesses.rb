@@ -2,10 +2,10 @@ class CreateWaitnesses < ActiveRecord::Migration[5.1]
   
   def up
     create_table :waitnesses do |t|
-      t.string :cin
-      t.string :first_name
-      t.string :last_name
-      t.string :telephone
+      t.string :cin , :limit=>8
+      t.string :first_name , :limit=>30
+      t.string :last_name , :limit=>30
+      t.string :telephone , :limit=>8
       t.text :content
 
       t.timestamps
