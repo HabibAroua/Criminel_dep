@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :victims
   resources :waitnesses
   resources :culprits
   resources :the_cases

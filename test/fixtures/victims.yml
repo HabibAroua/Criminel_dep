@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  cin: MyString
+  first_name: MyString
+  last_name: MyString
+  problem: MyString
+  cause_of_death: MyString
+  date_of_death: 2019-10-02
+
+two:
+  cin: MyString
+  first_name: MyString
+  last_name: MyString
+  problem: MyString
+  cause_of_death: MyString
+  date_of_death: 2019-10-02
