@@ -16,4 +16,5 @@ class CreateVictims < ActiveRecord::Migration[5.1]
   def down
     drop_table :victims
   end
+  
 end
