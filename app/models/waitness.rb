@@ -1,0 +1,2 @@
+class Waitness < ApplicationRecord
+end

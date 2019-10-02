@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Cin:</strong>
+  <%= @waitness.cin %>
+</p>
+
+<p>
+  <strong>First name:</strong>
+  <%= @waitness.first_name %>
+</p>
+
+<p>
+  <strong>Last name:</strong>
+  <%= @waitness.last_name %>
+</p>
+
+<p>
+  <strong>Telephone:</strong>
+  <%= @waitness.telephone %>
+</p>
+
+<p>
+  <strong>Content:</strong>
+  <%= @waitness.content %>
+</p>
+
+<%= link_to 'Edit', edit_waitness_path(@waitness) %> |
+<%= link_to 'Back', waitnesses_path %>
