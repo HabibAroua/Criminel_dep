@@ -7,7 +7,8 @@ class CreateWaitnesses < ActiveRecord::Migration[5.1]
       t.string :last_name , :limit=>30
       t.string :telephone , :limit=>8
       t.text :content
-
+      t.integer :the_case_id
+      #the date of add and edit
       t.timestamps
     end
   end

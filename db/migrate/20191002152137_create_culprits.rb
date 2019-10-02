@@ -9,6 +9,7 @@ class CreateCulprits < ActiveRecord::Migration[5.1]
       t.string :charged_for , :limit=>40
       t.string :status , :limit=>30
       t.text :content
+      t.integer :the_case_id
       #date of add and edit this object
       t.timestamps
     end
@@ -17,4 +18,5 @@ class CreateCulprits < ActiveRecord::Migration[5.1]
   def down
     drop_table :culprits
   end
+  
 end

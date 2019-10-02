@@ -33,6 +33,7 @@ ActiveRecord::Schema.define(version: 20191002162649) do
     t.string "charged_for", limit: 40
     t.string "status", limit: 30
     t.text "content"
+    t.integer "the_case_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -67,6 +68,7 @@ ActiveRecord::Schema.define(version: 20191002162649) do
   create_table "proofs", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
     t.string "type_proof", limit: 25
     t.text "content"
+    t.integer "the_case_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -109,6 +111,7 @@ ActiveRecord::Schema.define(version: 20191002162649) do
     t.string "problem", limit: 20
     t.string "cause_of_death", limit: 25
     t.date "date_of_death"
+    t.integer "the_case_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -119,6 +122,7 @@ ActiveRecord::Schema.define(version: 20191002162649) do
     t.string "last_name", limit: 30
     t.string "telephone", limit: 8
     t.text "content"
+    t.integer "the_case_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

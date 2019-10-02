@@ -8,7 +8,8 @@ class CreateVictims < ActiveRecord::Migration[5.1]
       t.string :problem , :limit=>20
       t.string :cause_of_death , :limit=>25
       t.date :date_of_death
-
+      t.integer :the_case_id
+      #the date of add and edit
       t.timestamps
     end
   end
