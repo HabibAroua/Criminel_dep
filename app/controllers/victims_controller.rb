@@ -64,7 +64,7 @@ class VictimsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_victim
-      @victim = Victim.find(params[:id])
+      @victim = Victim.find_by_id(params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
