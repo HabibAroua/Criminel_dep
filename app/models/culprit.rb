@@ -1,0 +1,2 @@
+class Culprit < ApplicationRecord
+end

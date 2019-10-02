@@ -1,0 +1,52 @@
+<%= form_with(model: culprit, local: true) do |form| %>
+  <% if culprit.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(culprit.errors.count, "error") %> prohibited this culprit from being saved:</h2>
+
+      <ul>
+      <% culprit.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :cin %>
+    <%= form.text_field :cin, id: :culprit_cin %>
+  </div>
+
+  <div class="field">
+    <%= form.label :first_name %>
+    <%= form.text_field :first_name, id: :culprit_first_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :last_name %>
+    <%= form.text_field :last_name, id: :culprit_last_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :date_of_birth %>
+    <%= form.date_select :date_of_birth, id: :culprit_date_of_birth %>
+  </div>
+
+  <div class="field">
+    <%= form.label :charged_for %>
+    <%= form.text_field :charged_for, id: :culprit_charged_for %>
+  </div>
+
+  <div class="field">
+    <%= form.label :status %>
+    <%= form.text_field :status, id: :culprit_status %>
+  </div>
+
+  <div class="field">
+    <%= form.label :content %>
+    <%= form.text_area :content, id: :culprit_content %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

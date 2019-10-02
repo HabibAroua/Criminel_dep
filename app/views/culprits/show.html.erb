@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Cin:</strong>
+  <%= @culprit.cin %>
+</p>
+
+<p>
+  <strong>First name:</strong>
+  <%= @culprit.first_name %>
+</p>
+
+<p>
+  <strong>Last name:</strong>
+  <%= @culprit.last_name %>
+</p>
+
+<p>
+  <strong>Date of birth:</strong>
+  <%= @culprit.date_of_birth %>
+</p>
+
+<p>
+  <strong>Charged for:</strong>
+  <%= @culprit.charged_for %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @culprit.status %>
+</p>
+
+<p>
+  <strong>Content:</strong>
+  <%= @culprit.content %>
+</p>
+
+<%= link_to 'Edit', edit_culprit_path(@culprit) %> |
+<%= link_to 'Back', culprits_path %>
