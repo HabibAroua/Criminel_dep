@@ -10,7 +10,8 @@ class TheCasesController < ApplicationController
   # GET /the_cases/1
   # GET /the_cases/1.json
   def show
-    
+    @the_case=TheCase.find_by_id(params[:id])
+    @victims=@the_case.victims
   end
 
   # GET /the_cases/new
