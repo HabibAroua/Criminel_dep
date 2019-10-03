@@ -12,6 +12,7 @@ class TheCasesController < ApplicationController
   def show
     @the_case=TheCase.find_by_id(params[:id])
     @victims=@the_case.victims
+    @culprits=@the_case.culprits
   end
 
   # GET /the_cases/new
