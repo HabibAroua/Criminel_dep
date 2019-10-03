@@ -13,6 +13,8 @@ class TheCasesController < ApplicationController
     @the_case=TheCase.find_by_id(params[:id])
     @victims=@the_case.victims
     @culprits=@the_case.culprits
+    @proofs=@the_case.proofs
+    @waitnesses=@the_case.waitnesses
   end
 
   # GET /the_cases/new
