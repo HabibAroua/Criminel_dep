@@ -201,17 +201,17 @@
         </td>
         <td>
           <center>
-            <%= link_to 'Show', the_case %>
+            <%= link_to '', the_case , class:"glyphicon glyphicon-eye-open" %>
           </center>
         </td>
         <td>
           <center>
-            <%= link_to 'Edit', edit_the_case_path(the_case) %>
+            <%= link_to '', edit_the_case_path(the_case) , class:"glyphicon glyphicon-pencil" %>
           </center>
           </td>
         <td>
           <center>
-            <%= link_to 'Destroy', the_case, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+            <%= link_to '', the_case, method: :delete, data: { confirm: 'Are you sure?' } , class:"glyphicon glyphicon-trash" %></td>
           </center>
       </tr>
     <% end %>
