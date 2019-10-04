@@ -65,7 +65,8 @@ class TheCasesController < ApplicationController
       format.json { head :no_content }
     end
   end
-  
+  ####################################################################################
+  #For menage the part of case
   def insert_victim
     require 'date'
     @the_case=TheCase.find_by_id(params[:id][:id])
@@ -79,6 +80,22 @@ class TheCasesController < ApplicationController
     @the_case.victims << @v
     redirect_to request.referrer, notice: "Victim added ..."
   end
+  
+  def insert_culprit
+    require 'date'
+    @the_case=TheCase.find_by_id(params[:id][:id])
+  end
+  
+  def insert_proof
+    require 'date'
+    @the_case=TheCase.find_by_id(params[:id][:id])
+  end
+  
+  def insert_waitness
+    require 'date'
+    @the_case=TheCase.find_by_id(params[:id][:id])
+  end
+################################################################################
 
   private
     # Use callbacks to share common setup or constraints between actions.
