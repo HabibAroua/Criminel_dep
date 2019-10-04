@@ -68,6 +68,7 @@ class TheCasesController < ApplicationController
   
   def insert_victim
     require 'date'
+    @the_case=TheCase.find_by_id(params[:id][:id])
     @v=Victim.new
     @v.cin=params[:victim][:cin]
     @v.first_name=params[:victim][:first_name]
@@ -75,7 +76,8 @@ class TheCasesController < ApplicationController
     @v.problem=params[:victim][:problem]
     @v.cause_of_death= params[:victim][:cause_of_death]
     @v.date_of_death=DateTime.parse(params[:victim][:date_of_death])
-    puts "the date is #{@v.date_of_death}"
+    @the_case.victims << @v
+    redirect_to request.referrer, notice: "Victim added ..."
   end
 
   private
