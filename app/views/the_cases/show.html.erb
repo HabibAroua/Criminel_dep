@@ -339,6 +339,81 @@
             </div>
             <br>
             <div id="form-culprit">
+              <div id="add-culprit">
+                <center>
+                  <h3>
+                    Add culprit
+                  </h3>
+                  <%= form_tag :action => "insert_culprit"  do %>
+                    <div id="hide">
+                      <%= text_field 'id' ,'id' , :value=>@the_case.id  %></p>
+                    </div>
+                    <table>
+                      <tr>
+                        <td>
+                          <p><label for='cin_1'>Cin</label>
+                        </td>
+                        <td>
+                          <%= text_field 'culprit', 'cin' , :id=>"cin_1" , class:"form-control" %></p>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <p><label for='first_name_1'>First name</label>
+                        </td>
+                        <td>
+                          <%= text_field 'culprit', 'first_name' , :id=>"first_name_1" , class:"form-control" %></p>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <p><label for='last_name_1'>Last name</label>
+                        </td>
+                        <td>
+                          <%= text_field 'culprit', 'last_name' , :id=>"last_name_1" , class:"form-control" %></p>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <p><label for='date_of_birth'>Date of birth</label>
+                        </td>
+                        <td>
+                          <%= date_field 'culprit', 'date_of_birth' , :id=>"date_of_birth" , class:"form-control" %></p>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <p><label for='charged_for'>Charged for</label>
+                        </td>
+                        <td>
+                          <%= text_field 'culprit', 'charged_for' , :id=>"charged_for" , class:"form-control" %></p>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <p><label for='status'>Status</label>
+                        </td>
+                        <td>
+                          <%= date_field 'culprit', 'status' , :id=>"status" , class:"form-control" %></p>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <p><label for="content_5">Content</label>
+                        </td>
+                        <td>
+                          <%= text_area 'culprit' 'content' , :id=>"content_5" , class:"form-control" %>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td colspan="2">
+                          <%= submit_tag "Create" , class:"btn btn-lg btn-primary btn-block" %>
+                        </td>
+                      </tr>
+                    </table>
+                  <% end %>
+                </center>
+              </div>
               <center>
                 <h3>
                   Culprits
@@ -459,6 +534,65 @@
             </div>
             <br>
               <div id="form-waitness">
+                <div id="add_waitness">
+                  <center>
+                  <h3>
+                    Add waitness
+                  </h3>
+                  <%= form_tag :action => "insert_waitness"  do %>
+                    <div id="hide">
+                      <%= text_field 'id' ,'id' , :value=>@the_case.id  %></p>
+                    </div>
+                    <table>
+                      <tr>
+                        <td>
+                          <p><label for='cin_2'>Cin</label>
+                        </td>
+                        <td>
+                          <%= text_field 'culprit', 'cin' , :id=>"cin_2" , class:"form-control" %></p>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <p><label for='first_name_2'>First name</label>
+                        </td>
+                        <td>
+                          <%= text_field 'culprit', 'first_name' , :id=>"first_name_2" , class:"form-control" %></p>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <p><label for='last_name_2'>Last name</label>
+                        </td>
+                        <td>
+                          <%= text_field 'culprit', 'last_name' , :id=>"last_name_2" , class:"form-control" %></p>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <p><label for='telephone'>Telephone</label>
+                        </td>
+                        <td>
+                          <%= telephone_field 'culprit', 'telephone' , :id=>"telephone" , class:"form-control" %></p>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <p><label for='content_1'>Content</label>
+                        </td>
+                        <td>
+                          <%= text_area 'culprit', 'charged_for' , :id=>"content_1" , class:"form-control" %></p>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td colspan="2">
+                          <%= submit_tag "Create" , class:"btn btn-lg btn-primary btn-block" %>
+                        </td>
+                      </tr>
+                    </table>
+                  <% end %>
+                </center>
+                </div>
                 <center>
                   <h3>
                     Waitnesses
