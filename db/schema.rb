@@ -109,7 +109,7 @@ ActiveRecord::Schema.define(version: 20191002162649) do
     t.string "first_name", limit: 30
     t.string "last_name", limit: 30
     t.string "problem", limit: 20
-    t.string "cause_of_death", limit: 25
+    t.string "cause_of_death", limit: 40
     t.date "date_of_death"
     t.integer "the_case_id"
     t.datetime "created_at", null: false

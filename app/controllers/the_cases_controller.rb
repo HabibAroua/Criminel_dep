@@ -67,13 +67,15 @@ class TheCasesController < ApplicationController
   end
   
   def insert_victim
+    require 'date'
     @v=Victim.new
     @v.cin=params[:victim][:cin]
     @v.first_name=params[:victim][:first_name]
     @v.last_name=params[:victim][:last_name]
     @v.problem=params[:victim][:problem]
-    @v.cause_of_death=[:victim][:cause_of_death]
-    @v.date_of_death=[:victim][:date_of_death]
+    @v.cause_of_death= params[:victim][:cause_of_death]
+    @v.date_of_death=DateTime.parse(params[:victim][:date_of_death])
+    puts "the date is #{@v.date_of_death}"
   end
 
   private
