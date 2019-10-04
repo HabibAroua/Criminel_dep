@@ -162,6 +162,73 @@
 				<div class="col-lg-12 col-md-12 col-sm-xs-12">
           <div id="all">
             <div id="form-victims">
+              <div id="add-victim">
+                <center>
+                  <h3>
+                    Add victim
+                  </h3>
+                  <%= form_tag :action => "insert_victim"  do %>
+                    <div id="hide">
+                      <%= text_field 'id' ,'id' , :value=>@the_case.id  %></p>
+                    </div>
+                    <table>
+                      <tr>
+                        <td>
+                          <p><label for='cin'>Cin</label>
+                        </td>
+                        <td>
+                          <%= text_field 'victim', 'cin' , :id=>"cin" , class:"form-control" %></p>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <p><label for='first_name'>First name</label>
+                        </td>
+                        <td>
+                          <%= text_field 'victim', 'first_name' , :id=>"first_name" , class:"form-control" %></p>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <p><label for='last_name'>Last name</label>
+                        </td>
+                        <td>
+                          <%= text_field 'victim', 'last_name' , :id=>"last_name" , class:"form-control" %></p>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <p><label for='problem'>Problem</label>
+                        </td>
+                        <td>
+                          <%= text_field 'victim', 'problem' , :id=>"problem" , class:"form-control" %></p>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <p><label for='cause_of_death'>Cause of death</label>
+                        </td>
+                        <td>
+                          <%= text_field 'victim', 'cause_of_death' , :id=>"cause_of_death" , class:"form-control" %></p>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <p><label for='date_of_death'>Date of death</label>
+                        </td>
+                        <td>
+                          <%= date_field 'victim', 'date_of_death' , :id=>"date_of_death" , class:"form-control" %></p>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td colspan="2">
+                          <%= submit_tag "Create" , class:"btn btn-lg btn-primary btn-block" %>
+                        </td>
+                      </tr>
+                    </table>
+                  <% end %>
+                </center>
+              </div>
               <center>
                 <h3>
                   Victims

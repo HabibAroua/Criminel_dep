@@ -65,6 +65,16 @@ class TheCasesController < ApplicationController
       format.json { head :no_content }
     end
   end
+  
+  def insert_victim
+    @v=Victim.new
+    @v.cin=params[:victim][:cin]
+    @v.first_name=params[:victim][:first_name]
+    @v.last_name=params[:victim][:last_name]
+    @v.problem=params[:victim][:problem]
+    @v.cause_of_death=[:victim][:cause_of_death]
+    @v.date_of_death=[:victim][:date_of_death]
+  end
 
   private
     # Use callbacks to share common setup or constraints between actions.
