@@ -536,62 +536,62 @@
               <div id="form-waitness">
                 <div id="add_waitness">
                   <center>
-                  <h3>
-                    Add waitness
-                  </h3>
-                  <%= form_tag :action => "insert_waitness"  do %>
-                    <div id="hide">
-                      <%= text_field 'id' ,'id' , :value=>@the_case.id  %></p>
-                    </div>
-                    <table>
-                      <tr>
-                        <td>
-                          <p><label for='cin_2'>Cin</label>
-                        </td>
-                        <td>
-                          <%= text_field 'culprit', 'cin' , :id=>"cin_2" , class:"form-control" %></p>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <p><label for='first_name_2'>First name</label>
-                        </td>
-                        <td>
-                          <%= text_field 'culprit', 'first_name' , :id=>"first_name_2" , class:"form-control" %></p>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <p><label for='last_name_2'>Last name</label>
-                        </td>
-                        <td>
-                          <%= text_field 'culprit', 'last_name' , :id=>"last_name_2" , class:"form-control" %></p>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <p><label for='telephone'>Telephone</label>
-                        </td>
-                        <td>
-                          <%= telephone_field 'culprit', 'telephone' , :id=>"telephone" , class:"form-control" %></p>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <p><label for='content_1'>Content</label>
-                        </td>
-                        <td>
-                          <%= text_area 'culprit', 'charged_for' , :id=>"content_1" , class:"form-control" %></p>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td colspan="2">
-                          <%= submit_tag "Create" , class:"btn btn-lg btn-primary btn-block" %>
-                        </td>
-                      </tr>
-                    </table>
-                  <% end %>
-                </center>
+                    <h3>
+                      Add waitness
+                    </h3>
+                    <%= form_tag :action => "insert_waitness"  do %>
+                      <div id="hide">
+                        <%= text_field 'id' ,'id' , :value=>@the_case.id  %></p>
+                      </div>
+                      <table>
+                        <tr>
+                          <td>
+                            <p><label for='cin_2'>Cin</label>
+                          </td>
+                          <td>
+                            <%= text_field 'culprit', 'cin' , :id=>"cin_2" , class:"form-control" %></p>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <p><label for='first_name_2'>First name</label>
+                          </td>
+                          <td>
+                            <%= text_field 'culprit', 'first_name' , :id=>"first_name_2" , class:"form-control" %></p>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <p><label for='last_name_2'>Last name</label>
+                          </td>
+                          <td>
+                            <%= text_field 'culprit', 'last_name' , :id=>"last_name_2" , class:"form-control" %></p>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <p><label for='telephone'>Telephone</label>
+                          </td>
+                          <td>
+                            <%= telephone_field 'culprit', 'telephone' , :id=>"telephone" , class:"form-control" %></p>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <p><label for='content_1'>Content</label>
+                          </td>
+                          <td>
+                            <%= text_area 'culprit', 'charged_for' , :id=>"content_1" , class:"form-control" %></p>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td colspan="2">
+                            <%= submit_tag "Create" , class:"btn btn-lg btn-primary btn-block" %>
+                          </td>
+                        </tr>
+                      </table>
+                    <% end %>
+                  </center>
                 </div>
                 <center>
                   <h3>
@@ -693,6 +693,36 @@
               </div>
               <br>
               <div id="form-proof">
+                <div id="add-proof">
+                  <center>
+                    <h3>
+                      Add proof
+                    </h3>
+                    <%= form_tag :action => "insert_proof"  do %>
+                      <div id="hide">
+                        <%= text_field 'id' ,'id' , :value=>@the_case.id  %></p>
+                      </div>
+                      <table>
+                        <tr>
+                          <td>
+                            <p><label for='type_proof'>Type proof</label>
+                          </td>
+                          <td>
+                            <%= text_field 'proof', 'type_proof' , :id=>"type_proof" , class:"form-control" %></p>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <p><label for='content_0'>Content</label>
+                          </td>
+                          <td>
+                            <%= text_area 'proof', 'content' , :id=>"content_0" , class:"form-control" %></p>
+                          </td>
+                        </tr>
+                      </table>
+                    <% end %>
+                  </center>
+                </div>
                 <center>
                   <h3>
                     Proofs

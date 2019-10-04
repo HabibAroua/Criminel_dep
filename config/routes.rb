@@ -22,6 +22,7 @@ Rails.application.routes.draw do
   post '/governorates/add_police_station' , to: 'governorates#add_police_station'
   post '/governorates/insert' , to: 'governorates#insert'
   post '/police_stations/insert' , to: 'police_stations#insert'
+  post '/the_cases/insert_proof' , to: 'the_cases#insert_proof'
   post '/the_cases/insert_victim' , to: 'the_cases#insert_victim'
   post '/the_cases/insert_culprit' , to: 'the_cases#insert_culprit'
   post '/the_cases/insert_waitness' , to: 'the_cases#insert_waitness'
