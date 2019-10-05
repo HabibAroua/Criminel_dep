@@ -6,6 +6,14 @@
       $("#all").hide();
     }
    );
+  
+  $(
+    function()
+    {
+      $("#hide_culprit").hide();
+    }
+  );
+  
   $(
     function()
     {
@@ -168,7 +176,7 @@
                     Add victim
                   </h3>
                   <%= form_tag :action => "insert_victim"  do %>
-                    <div id="hide">
+                    <div id="hide_victim">
                       <%= text_field 'id' ,'id' , :value=>@the_case.id  %></p>
                     </div>
                     <table>
@@ -345,7 +353,7 @@
                     Add culprit
                   </h3>
                   <%= form_tag :action => "insert_culprit"  do %>
-                    <div id="hide">
+                    <div id="hide_culprit">
                       <%= text_field 'id' ,'id' , :value=>@the_case.id  %></p>
                     </div>
                     <table>
@@ -540,7 +548,7 @@
                       Add waitness
                     </h3>
                     <%= form_tag :action => "insert_waitness"  do %>
-                      <div id="hide">
+                      <div id="hide_waitness">
                         <%= text_field 'id' ,'id' , :value=>@the_case.id  %></p>
                       </div>
                       <table>
@@ -699,7 +707,7 @@
                       Add proof
                     </h3>
                     <%= form_tag :action => "insert_proof"  do %>
-                      <div id="hide">
+                      <div id="hide_proof">
                         <%= text_field 'id' ,'id' , :value=>@the_case.id  %></p>
                       </div>
                       <table>
