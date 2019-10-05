@@ -97,8 +97,24 @@
         function()
         {
           $("#hide_bt_add_victim").show();
-          $("#add_victim").show();
           $("#add-victim").show();
+          $("#bt_add_victim").hide();
+        }
+      );
+    }
+  );
+  
+  $(document).ready
+  (
+    function()
+    {
+      $("#hide_bt_add_victim").click
+      (
+        function()
+        {
+          $("#bt_add_victim").show();
+          $("#add-victim").hide();
+          $("#hide_bt_add_victim").hide();
         }
       );
     }
