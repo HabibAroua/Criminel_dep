@@ -8,55 +8,88 @@
         <h2><%= pluralize(the_case.errors.count, "error") %> prohibited this the_case from being saved:</h2>
   
         <ul>
-        <% the_case.errors.full_messages.each do |message| %>
-          <li><%= message %></li>
-        <% end %>
+          <% the_case.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+          <% end %>
         </ul>
       </div>
     <% end %>
-  
-    <div class="field">
-      <%= form.label :title %>
-      <%= form.text_field :title, id: :the_case_title , class:"form-control" %>
-    </div>
-  
-    <div class="field">
-      <%= form.label :type_case %>
-      <%= form.text_field :type_case, id: :the_case_type_case , class:"form-control" %>
-    </div>
-  
-    <div class="field">
-      <%= form.label :complainant_cin %>
-      <%= form.text_field :complainant_cin, id: :the_case_complainant_cin ,  class:"form-control"%>
-    </div>
-  
-    <div class="field">
-      <%= form.label :complainant_first_name %>
-      <%= form.text_field :complainant_first_name, id: :the_case_complainant_first_name , class:"form-control"%>
-    </div>
-  
-    <div class="field">
-      <%= form.label :complainant_last_name %>
-      <%= form.text_field :complainant_last_name, id: :the_case_complainant_last_name , class:"form-control" %>
-    </div>
-  
-    <div class="field">
-      <%= form.label :complainant_telephone %>
-      <%= form.text_field :complainant_telephone, id: :the_case_complainant_telephone , class:"form-control" %>
-    </div>
-  
-    <div class="field">
-      <%= form.label :location %>
-      <%= form.text_field :location, id: :the_case_location , class:"form-control" %>
-    </div>
-  
-    <div class="field">
-      <%= form.label :address %>
-      <%= form.text_field :address, id: :the_case_address , class:"form-control" %>
-    </div>
-  
-    <div class="actions">
-      <%= form.submit "Update" , class:"btn btn-lg btn-primary btn-block" %>
-    </div>
-  <% end %>
+    <table>
+      <tr>
+        <td>
+          <%= form.label :title %>
+        </td>
+        <td>
+          <%= form.text_field :title, id: :the_case_title , class:"form-control" %>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <%= form.label :type_case %>
+        </td>
+        <td>
+          <%= form.text_field :type_case, id: :the_case_type_case , class:"form-control" %>
+        </td>
+      </tr>
+    
+      <tr>
+        <td>
+          <%= form.label :complainant_cin %>
+        </td>
+        <td>
+          <%= form.text_field :complainant_cin, id: :the_case_complainant_cin ,  class:"form-control"%>
+        </td>
+      </tr>
+    
+      <tr>
+        <td>
+          <%= form.label :complainant_first_name %>
+        </td>
+        <td>
+          <%= form.text_field :complainant_first_name, id: :the_case_complainant_first_name , class:"form-control"%>
+        </td>
+      </tr>
+    
+      <tr>
+        <td>
+          <%= form.label :complainant_last_name %>
+        </td>
+        <td>
+          <%= form.text_field :complainant_last_name, id: :the_case_complainant_last_name , class:"form-control" %>
+        </td>
+      </tr>
+    
+      <tr>
+        <td>
+          <%= form.label :complainant_telephone %>
+        </td>
+        <td>
+          <%= form.text_field :complainant_telephone, id: :the_case_complainant_telephone , class:"form-control" %>
+        </td>
+      </tr>
+    
+      <tr>
+        <td>
+          <%= form.label :location %>
+        </td>
+        <td>
+          <%= form.text_field :location, id: :the_case_location , class:"form-control" %>
+        </td>
+      </tr>
+    
+      <tr>
+        <td>
+          <%= form.label :address %>
+        </td>
+        <td>
+          <%= form.text_field :address, id: :the_case_address , class:"form-control" %>
+        </td>
+      </tr>
+    
+      <tr>
+        <td colspan="2"><%= form.submit "Update" , class:"btn btn-lg btn-primary btn-block" %></td>
+      </tr>
+    <% end %>
+    </table>
+    
 </center>
