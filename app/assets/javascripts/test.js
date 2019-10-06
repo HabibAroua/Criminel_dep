@@ -1,3 +1,4 @@
+/*
 var index = 1;
 showImage(1);
 
@@ -43,3 +44,5 @@ function autoSlide()
 	index++;
 	setTimeout(autoSlide,2000)
 }
+*/
+//alert("Hello");
