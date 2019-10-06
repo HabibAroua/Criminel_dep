@@ -102,8 +102,15 @@ class TheCasesController < ApplicationController
   end
   
   def insert_waitness
-    require 'date'
     @the_case=TheCase.find_by_id(params[:id][:id])
+    @w=Waitness.new
+    @w.cin=params[:waitness][:cin]
+    @w.first_name=params[:waitness][:first_name]
+    @w.last_name=params[:waitness][:last_name]
+    @w.telephone=params[:waitness][:telephone]
+    @w.content=params[:waitness][:content]
+    @the_case.waitnesses << @w
+    redirect_to request.referrer, notice: "waitness added ..."
   end
 ################################################################################
 
