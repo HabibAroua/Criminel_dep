@@ -97,8 +97,12 @@ class TheCasesController < ApplicationController
   end
   
   def insert_proof
-    require 'date'
     @the_case=TheCase.find_by_id(params[:id][:id])
+    @p=Proof.new
+    @p.type_proof=params[:proof][:type_proof]
+    @p.content=params[:proof][:content]
+    @the_case.proofs << @p
+    redirect_to request.referrer, notice: "proof added ..."
   end
   
   def insert_waitness
