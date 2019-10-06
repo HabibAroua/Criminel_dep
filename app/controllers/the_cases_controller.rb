@@ -84,6 +84,16 @@ class TheCasesController < ApplicationController
   def insert_culprit
     require 'date'
     @the_case=TheCase.find_by_id(params[:id][:id])
+    @c=Culprit.new
+    @c.cin=params[:culprit][:cin]
+    @c.first_name=params[:culprit][:first_name]
+    @c.last_name=params[:culprit][:last_name]
+    @c.date_of_birth=DateTime.parse(params[:culprit][:date_of_birth])
+    @c.charged_for=params[:culprit][:charged_for]
+    @c.status=params[:culprit][:status]
+    @c.content=params[:culprit][:content]
+    @the_case.culprits << @c
+    redirect_to request.referrer, notice: "Culprit added ..."
   end
   
   def insert_proof
