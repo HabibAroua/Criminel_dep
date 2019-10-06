@@ -91,6 +91,13 @@
     }
   );
   
+  $(
+    function()
+    {
+      $("#hide_bt_add_proof").hide();
+    }
+  );
+  
   $(document).ready
 	(
 		function()
@@ -214,6 +221,38 @@
           $("#bt_add_waitness").show();
           $("#add-waitness").hide();
           $("#hide_bt_add_waitness").hide();
+        }
+      );
+    }
+  );
+  //proof
+  $(document).ready
+  (
+    function()
+    {
+      $("#bt_add_proof").click
+      (
+        function()
+        {
+          $("#hide_bt_add_proof").show();
+          $("#add-proof").show();
+          $("#bt_add_proof").hide();
+        }
+      );
+    }
+  );
+  
+  $(document).ready
+  (
+    function()
+    {
+      $("#hide_bt_add_proof").click
+      (
+        function()
+        {
+          $("#bt_add_proof").show();
+          $("#add-proof").hide();
+          $("#hide_bt_add_proof").hide();
         }
       );
     }
@@ -972,6 +1011,16 @@
                         <th>
                           <center>
                             Delete
+                          </center>
+                        </th>
+                        <th>
+                          <center>
+                            <button id="bt_add_proof">
+                              Add proof
+                            </button>
+                            <button id="hide_bt_add_proof">
+                              Hide
+                            </button>
                           </center>
                         </th>
                       </tr>
