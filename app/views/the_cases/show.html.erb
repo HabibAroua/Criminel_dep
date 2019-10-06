@@ -260,6 +260,7 @@
 			<div class="row">
 				<div class="col-lg-12 col-md-12 col-sm-xs-12">
           <div id="all">
+            <!-- block victim -->
             <div id="form-victims">
               <div id="add-victim">
                 <center>
@@ -446,7 +447,9 @@
                 </tbody>
               </table>
             </div>
+            <!-- end block victim -->
             <br>
+            <!-- Block culprit -->
             <div id="form-culprit">
               <div id="add-culprit">
                 <center>
@@ -641,166 +644,170 @@
                 </tbody>
               </table>
             </div>
+            <!-- end block culprit -->
             <br>
-              <div id="form-waitness">
-                <div id="add-waitness">
-                  <center>
-                    <h3>
-                      Add waitness
-                    </h3>
-                    <%= form_tag :action => "insert_waitness"  do %>
-                      <div id="hide_waitness">
-                        <%= text_field 'id' ,'id' , :value=>@the_case.id  %></p>
-                      </div>
-                      <table>
-                        <tr>
-                          <td>
-                            <p><label for='cin_2'>Cin</label>
-                          </td>
-                          <td>
-                            <%= text_field 'culprit', 'cin' , :id=>"cin_2" , class:"form-control" %></p>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>
-                            <p><label for='first_name_2'>First name</label>
-                          </td>
-                          <td>
-                            <%= text_field 'culprit', 'first_name' , :id=>"first_name_2" , class:"form-control" %></p>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>
-                            <p><label for='last_name_2'>Last name</label>
-                          </td>
-                          <td>
-                            <%= text_field 'culprit', 'last_name' , :id=>"last_name_2" , class:"form-control" %></p>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>
-                            <p><label for='telephone'>Telephone</label>
-                          </td>
-                          <td>
-                            <%= telephone_field 'culprit', 'telephone' , :id=>"telephone" , class:"form-control" %></p>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>
-                            <p><label for='content_1'>Content</label>
-                          </td>
-                          <td>
-                            <%= text_area 'culprit', 'charged_for' , :id=>"content_1" , class:"form-control" %></p>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td colspan="2">
-                            <%= submit_tag "Create" , class:"btn btn-lg btn-primary btn-block" %>
-                          </td>
-                        </tr>
-                      </table>
-                    <% end %>
-                  </center>
-                </div>
-                <center>
-                  <h3>
-                    Waitnesses
-                  </h3>
-                </center>
-                <table class="table table-striped table-dark">
-                  <thead>
-                    <tr>
-                      <th>
-                        <center>
-                          Cin
-                        </center>
+            <!-- block waitness -->
+            <div id="form-waitness">
+               <div id="add-waitness">
+                 <center>
+                   <h3>
+                     Add waitness
+                   </h3>
+                   <%= form_tag :action => "insert_waitness"  do %>
+                     <div id="hide_waitness">
+                       <%= text_field 'id' ,'id' , :value=>@the_case.id  %></p>
+                     </div>
+                     <table>
+                       <tr>
+                         <td>
+                           <p><label for='cin_2'>Cin</label>
+                         </td>
+                         <td>
+                           <%= text_field 'culprit', 'cin' , :id=>"cin_2" , class:"form-control" %></p>
+                         </td>
+                       </tr>
+                       <tr>
+                         <td>
+                           <p><label for='first_name_2'>First name</label>
+                         </td>
+                         <td>
+                           <%= text_field 'culprit', 'first_name' , :id=>"first_name_2" , class:"form-control" %></p>
+                         </td>
+                       </tr>
+                       <tr>
+                         <td>
+                           <p><label for='last_name_2'>Last name</label>
+                         </td>
+                         <td>
+                           <%= text_field 'culprit', 'last_name' , :id=>"last_name_2" , class:"form-control" %></p>
+                         </td>
+                       </tr>
+                       <tr>
+                         <td>
+                           <p><label for='telephone'>Telephone</label>
+                         </td>
+                         <td>
+                           <%= telephone_field 'culprit', 'telephone' , :id=>"telephone" , class:"form-control" %></p>
+                         </td>
+                       </tr>
+                       <tr>
+                         <td>
+                           <p><label for='content_1'>Content</label>
+                         </td>
+                         <td>
+                           <%= text_area 'culprit', 'charged_for' , :id=>"content_1" , class:"form-control" %></p>
+                         </td>
+                       </tr>
+                       <tr>
+                         <td colspan="2">
+                           <%= submit_tag "Create" , class:"btn btn-lg btn-primary btn-block" %>
+                         </td>
+                       </tr>
+                     </table>
+                   <% end %>
+                 </center>
+               </div>
+               <center>
+                 <h3>
+                   Waitnesses
+                 </h3>
+               </center>
+               <table class="table table-striped table-dark">
+                 <thead>
+                   <tr>
+                     <th>
+                       <center>
+                         Cin
+                       </center>
+                     </th>
+                     <th>
+                       <center>
+                         First name
+                       </center>
+                     </th>
+                     <th>
+                       <center>
+                         Last name
+                       </center>
+                     </th>
+                     <th>
+                       <center>
+                         Telephone
+                       </center>
+                     </th>
+                     <th>
+                       <center>
+                         Content
+                       </center>
+                     </th>
+                     <th>
+                       <center>
+                         Show
+                       </center>
                       </th>
                       <th>
-                        <center>
-                          First name
-                        </center>
-                      </th>
-                      <th>
-                        <center>
-                          Last name
-                        </center>
-                      </th>
-                      <th>
-                        <center>
-                          Telephone
-                        </center>
-                      </th>
-                      <th>
-                        <center>
-                          Content
-                        </center>
-                      </th>
-                      <th>
-                        <center>
-                          Show
-                        </center>
-                      </th>
-                      <th>
-                        <center>
-                          Edit
-                        </center>
-                      </th>
-                      <th>
-                        <center>
-                          Delete
-                        </center>
-                      </th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <% @waitnesses.each do |waitness| %>
-                      <tr>
-                        <td>
-                          <center>
-                            <%= waitness.cin %>
-                          </center>    
-                        </td>
-                        <td>
-                          <center>
-                            <%= waitness.first_name %>
-                          </center>    
-                        </td>
-                        <td>
-                          <center>
-                            <%= waitness.last_name %>
-                          </center>    
-                        </td>
-                        <td>
-                          <center>
-                            <%= waitness.telephone %>
-                          </center>    
-                        </td>
-                        <td>
-                          <center>
-                            <%= waitness.content %>
-                          </center>    
-                        </td>
-                        <td>
-                          <center>
-                            <%= link_to '', waitness , class:"glyphicon glyphicon-eye-open" %>
-                          </center>    
-                        </td>
-                        <td>
-                          <center>
-                            <%= link_to '', edit_waitness_path(waitness) , class:"glyphicon glyphicon-pencil" %>
-                          </center>    
-                        </td>
-                        <td>
-                          <center>
-                            <%= link_to '', waitness, method: :delete, data: { confirm: 'Are you sure?' } ,  class:"glyphicon glyphicon-trash" %>
-                          </center>    
-                        </td>
-                      </tr>
-                    <% end %>
-                  </tbody>
-                </table>
-              </div>
+                       <center>
+                         Edit
+                       </center>
+                     </th>
+                     <th>
+                       <center>
+                         Delete
+                       </center>
+                     </th>
+                   </tr>
+                 </thead>
+                 <tbody>
+                   <% @waitnesses.each do |waitness| %>
+                     <tr>
+                       <td>
+                         <center>
+                           <%= waitness.cin %>
+                         </center>    
+                       </td>
+                       <td>
+                         <center>
+                           <%= waitness.first_name %>
+                         </center>    
+                       </td>
+                       <td>
+                         <center>
+                           <%= waitness.last_name %>
+                         </center>    
+                       </td>
+                       <td>
+                         <center>
+                           <%= waitness.telephone %>
+                         </center>    
+                       </td>
+                       <td>
+                         <center>
+                           <%= waitness.content %>
+                         </center>    
+                       </td>
+                       <td>
+                         <center>
+                           <%= link_to '', waitness , class:"glyphicon glyphicon-eye-open" %>
+                         </center>    
+                       </td>
+                       <td>
+                         <center>
+                           <%= link_to '', edit_waitness_path(waitness) , class:"glyphicon glyphicon-pencil" %>
+                         </center>    
+                       </td>
+                       <td>
+                         <center>
+                           <%= link_to '', waitness, method: :delete, data: { confirm: 'Are you sure?' } ,  class:"glyphicon glyphicon-trash" %>
+                         </center>    
+                       </td>
+                     </tr>
+                   <% end %>
+                 </tbody>
+               </table>
+            </div>
+            <!-- end block waitness -->
               <br>
+              <!-- block proof -->
               <div id="form-proof">
                 <div id="add-proof">
                   <center>
@@ -905,6 +912,7 @@
                     </tbody>
                   </table>
               </div>
+              <!-- end block proof -->
           </div>    
         </div>
       </div>
