@@ -77,6 +77,13 @@
     }
   );
   
+  $(
+    function()
+    {
+      $("#hide_bt_add_culprit").hide();
+    }
+  );
+  
   $(document).ready
 	(
 		function()
@@ -108,7 +115,7 @@
       );
     }
   );
-  
+  //victim
   $(document).ready
   (
     function()
@@ -140,7 +147,38 @@
       );
     }
   );
+  //culprit
+  $(document).ready
+  (
+    function()
+    {
+      $("#bt_add_culprit").click
+      (
+        function()
+        {
+          $("#hide_bt_add_culprit").show();
+          $("#add-culprit").show();
+          $("#bt_add_culprit").hide();
+        }
+      );
+    }
+  );
   
+  $(document).ready
+  (
+    function()
+    {
+      $("#hide_bt_add_culprit").click
+      (
+        function()
+        {
+          $("#bt_add_culprit").show();
+          $("#add-culprit").hide();
+          $("#hide_bt_add_culprit").hide();
+        }
+      );
+    }
+  );
 </script>
 <br>
 <br>
@@ -582,6 +620,16 @@
                     <th>
                       <center>
                         Delete
+                      </center>
+                    </th>
+                    <th>
+                      <center>
+                        <button id="bt_add_culprit">
+                          Add culprit
+                        </button>
+                        <button id="hide_bt_add_culprit">
+                          Hide
+                        </button>
                       </center>
                     </th>
                   </tr>
