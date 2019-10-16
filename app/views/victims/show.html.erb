@@ -3,35 +3,34 @@
 <br>
 <br>
 <br>
-<p>
-  <strong>Cin:</strong>
-  <%= @victim.cin %>
-</p>
-
-<p>
-  <strong>First name:</strong>
-  <%= @victim.first_name %>
-</p>
-
-<p>
-  <strong>Last name:</strong>
-  <%= @victim.last_name %>
-</p>
-
-<p>
-  <strong>Problem:</strong>
-  <%= @victim.problem %>
-</p>
-
-<p>
-  <strong>Cause of death:</strong>
-  <%= @victim.cause_of_death %>
-</p>
-
-<p>
-  <strong>Date of death:</strong>
-  <%= @victim.date_of_death %>
-</p>
-
-<%= link_to 'Edit', edit_victim_path(@victim) %> |
-<%= link_to 'Back', victims_path %>
+<center>
+  <h3>Informations of victim</h3>
+  <table class="tab">
+    <tr class="tr">
+      <td class="td"><strong>Cin:</strong></td>
+      <td><%= @victim.cin %></td>
+    </tr>
+    <tr class="tr">
+      <td class="td"><strong>First name:</strong></td>
+      <td><%= @victim.first_name %></td>
+    </tr>
+    <tr class="tr">
+      <td class="td"><strong>Last name:</strong></td>
+      <td><%= @victim.last_name %></td>
+    </tr>
+    <tr class="tr">
+      <td class="td"><strong>Problem:</strong></td>
+      <td><%= @victim.problem %></td>
+    </tr>
+    <tr class="tr">
+      <td class="td"><strong>Cause of death:</strong></td>
+      <td><%= @victim.cause_of_death %></td>
+    </tr>
+    <tr class="tr">
+      <td class="td"><strong>Date of death:</strong></td>
+      <td><%= @victim.date_of_death %></td>
+    </tr>
+  </table>
+  <%= link_to 'Edit', edit_victim_path(@victim) %> |
+  <%= link_to 'Back', victims_path %>
+</center>
