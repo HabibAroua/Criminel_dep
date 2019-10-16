@@ -1,42 +1,50 @@
-<%= form_with(model: waitness, local: true) do |form| %>
-  <% if waitness.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(waitness.errors.count, "error") %> prohibited this waitness from being saved:</h2>
-
-      <ul>
-      <% waitness.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
+<br>
+<br>
+<br>
+<br>
+<center>
+  <h3>Edit this witness</h3>
+  <%= form_with(model: waitness, local: true) do |form| %>
+    <% if waitness.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(waitness.errors.count, "error") %> prohibited this waitness from being saved:</h2>
+  
+        <ul>
+        <% waitness.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
+    <table>
+      <tr>
+        <td><%= form.label :cin %></td>
+        <td><%= form.text_field :cin, id: :waitness_cin , class:"form-control" %></td>
+      </tr>
+      <tr>
+        <td><%= form.label :first_name %></td>
+        <td><%= form.text_field :first_name, id: :waitness_first_name , class:"form-control" %></td>
+      </tr>
+      <tr>
+        <td><%= form.label :last_name %></td>
+        <td><%= form.text_field :last_name, id: :waitness_last_name , class:"form-control" %></td>
+      </tr>
+      <tr>
+        <td><%= form.label :telephone %></td>
+        <td><%= form.text_field :telephone, id: :waitness_telephone , class:"form-control" %></td>
+      </tr>
+      <tr>
+        <td><%= form.label :content %></td>
+        <td><%= form.text_area :content, id: :waitness_content , class:"form-control" %></td>
+      </tr>
+      <tr>
+        <td colspan="2">
+          <div class="actions">
+            <%= form.submit "Update" , class:"btn btn-lg btn-primary btn-block" %>
+          </div>
+        </td>
+      </tr>
+    </table>
+    
   <% end %>
-
-  <div class="field">
-    <%= form.label :cin %>
-    <%= form.text_field :cin, id: :waitness_cin %>
-  </div>
-
-  <div class="field">
-    <%= form.label :first_name %>
-    <%= form.text_field :first_name, id: :waitness_first_name %>
-  </div>
-
-  <div class="field">
-    <%= form.label :last_name %>
-    <%= form.text_field :last_name, id: :waitness_last_name %>
-  </div>
-
-  <div class="field">
-    <%= form.label :telephone %>
-    <%= form.text_field :telephone, id: :waitness_telephone %>
-  </div>
-
-  <div class="field">
-    <%= form.label :content %>
-    <%= form.text_area :content, id: :waitness_content %>
-  </div>
-
-  <div class="actions">
-    <%= form.submit %>
-  </div>
-<% end %>
+</center>
