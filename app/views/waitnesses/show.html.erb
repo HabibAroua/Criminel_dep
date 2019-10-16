@@ -1,29 +1,32 @@
 <p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Cin:</strong>
-  <%= @waitness.cin %>
-</p>
-
-<p>
-  <strong>First name:</strong>
-  <%= @waitness.first_name %>
-</p>
-
-<p>
-  <strong>Last name:</strong>
-  <%= @waitness.last_name %>
-</p>
-
-<p>
-  <strong>Telephone:</strong>
-  <%= @waitness.telephone %>
-</p>
-
-<p>
-  <strong>Content:</strong>
-  <%= @waitness.content %>
-</p>
-
-<%= link_to 'Edit', edit_waitness_path(@waitness) %> |
-<%= link_to 'Back', waitnesses_path %>
+<br>
+<br>
+<br>
+<br>
+<center>
+  <h3>Information of the witness</h3>
+  <table class="tab">
+    <tr class="tr">
+      <td class="td"><strong>Cin:</strong></td>
+      <td class="td"><%= @waitness.cin %></td>
+    </tr>
+    <tr class="tr">
+      <td class="td"><strong>First name:</strong></td>
+      <td class="td"><%= @waitness.first_name %></td>
+    </tr>
+    <tr class="tr">
+      <td class="td"><strong>Last name:</strong></td>
+      <td class="td"><%= @waitness.last_name %></td>
+    </tr>
+    <tr class="tr">
+      <td><strong>Telephone:</strong></td>
+      <td><%= @waitness.telephone %></td>
+    </tr>
+    <tr class="tr">
+      <td class="td"><strong>Content:</strong></td>
+      <td class="td"><%= @waitness.content %></td>
+    </tr>
+  </table>
+  <%= link_to 'Edit', edit_waitness_path(@waitness) %> |
+  <%= link_to 'Back', waitnesses_path %>
+</center>
