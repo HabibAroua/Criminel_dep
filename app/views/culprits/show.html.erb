@@ -34,8 +34,6 @@
         <td><%= @culprit.content %></td>
       </tr>
   </table>
+  <%= link_to 'Edit', edit_culprit_path(@culprit) %> |
+  <%= link_to 'Back',  :controller=>:wanteds , :action =>:find  %>
 </center>
-
-
-<%= link_to 'Edit', edit_culprit_path(@culprit) %> |
-<%= link_to 'Back',  :controller=>:wanteds , :action =>:find  %>
