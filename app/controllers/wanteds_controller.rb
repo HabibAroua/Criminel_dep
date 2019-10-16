@@ -1,5 +1,5 @@
 class WantedsController < ApplicationController
   def find
-	@wanted=Culprit.all
+	@wanted=Culprit.where("status='wanted'")
   end
 end
