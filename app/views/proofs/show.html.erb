@@ -1,14 +1,19 @@
 <p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Type proof:</strong>
-  <%= @proof.type_proof %>
-</p>
-
-<p>
-  <strong>Content:</strong>
-  <%= @proof.content %>
-</p>
-
-<%= link_to 'Edit', edit_proof_path(@proof) %> |
-<%= link_to 'Back', proofs_path %>
+<br>
+<br>
+<br>
+<br>
+<center>
+  <table class="tab">
+    <tr class="tr">
+      <td class="td"><strong>Type proof:</strong></td>
+      <td class="td"><%= @proof.type_proof %></td>
+    </tr>
+    <tr class="tr">
+      <td class="td"><strong>Content:</strong></td>
+      <td class="td"><%= @proof.content %></td>
+    </tr>
+  </table>
+  <%= link_to 'Edit', edit_proof_path(@proof) %> |
+  <%= link_to 'Back', proofs_path %>
+</center>
