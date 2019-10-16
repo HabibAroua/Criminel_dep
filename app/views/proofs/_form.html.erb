@@ -1,27 +1,39 @@
-<%= form_with(model: proof, local: true) do |form| %>
-  <% if proof.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(proof.errors.count, "error") %> prohibited this proof from being saved:</h2>
-
-      <ul>
-      <% proof.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
+<br>
+<br>
+<br>
+<br>
+<center>
+  <h3>Edit the proof</h3>
+  <%= form_with(model: proof, local: true) do |form| %>
+    <% if proof.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(proof.errors.count, "error") %> prohibited this proof from being saved:</h2>
+  
+        <ul>
+        <% proof.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
+    <table>
+      <tr>
+        <td><%= form.label :type_proof %></td>
+        <td><%= form.text_field :type_proof, id: :proof_type_proof , class:"form-control" %></td>
+      </tr>
+      <tr>
+        <td><%= form.label :content %></td>
+        <td><%= form.text_area :content, id: :proof_content , class:"form-control" %></td>
+      </tr>
+      <tr>
+        <td colspan="2">
+          <div class="actions">
+            <%= form.submit "Update" , class:"btn btn-lg btn-primary btn-block" %>
+          </div>
+        </td>
+      </tr>
+    </table>
+    <%= link_to 'Show', @proof %> |
+    <%= link_to 'Back', proofs_path %>
   <% end %>
-
-  <div class="field">
-    <%= form.label :type_proof %>
-    <%= form.text_field :type_proof, id: :proof_type_proof %>
-  </div>
-
-  <div class="field">
-    <%= form.label :content %>
-    <%= form.text_area :content, id: :proof_content %>
-  </div>
-
-  <div class="actions">
-    <%= form.submit %>
-  </div>
-<% end %>
+</center>
