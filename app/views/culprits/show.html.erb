@@ -1,39 +1,41 @@
 <p id="notice"><%= notice %></p>
+<br>
+<br>
+<br>
+<br>
+<center>
+  <table class="tab">
+      <tr class="tr">
+        <td class="td"><strong>Cin:</strong></td>
+        <td><%= @culprit.cin %></td>
+      </tr>
+      <tr>
+        <td><strong>First name:</strong></td>
+        <td><%= @culprit.first_name %></td>
+      </tr>
+      <tr>
+        <td><strong>Last name:</strong></td>
+        <td><%= @culprit.last_name %></td>
+      </tr>
+      <tr>
+        <td><strong>Date of birth:</strong></td>
+        <td><%= @culprit.date_of_birth %></td>
+      </tr>
+      <tr>
+        <td><strong>Charged for:</strong></td>
+        <td><%= @culprit.charged_for %></td>
+      </tr>
+      <tr>
+        <td><strong>Status:</strong></td>
+        <td><%= @culprit.status %></td>
+      </tr>
+      <tr>
+        <td><strong>Content:</strong></td>
+        <td><%= @culprit.content %></td>
+      </tr>
+  </table>
+</center>
 
-<p>
-  <strong>Cin:</strong>
-  <%= @culprit.cin %>
-</p>
-
-<p>
-  <strong>First name:</strong>
-  <%= @culprit.first_name %>
-</p>
-
-<p>
-  <strong>Last name:</strong>
-  <%= @culprit.last_name %>
-</p>
-
-<p>
-  <strong>Date of birth:</strong>
-  <%= @culprit.date_of_birth %>
-</p>
-
-<p>
-  <strong>Charged for:</strong>
-  <%= @culprit.charged_for %>
-</p>
-
-<p>
-  <strong>Status:</strong>
-  <%= @culprit.status %>
-</p>
-
-<p>
-  <strong>Content:</strong>
-  <%= @culprit.content %>
-</p>
 
 <%= link_to 'Edit', edit_culprit_path(@culprit) %> |
-<%= link_to 'Back', culprits_path %>
+<%= link_to 'Back',  :controller=>:wanteds , :action =>:find  %>
