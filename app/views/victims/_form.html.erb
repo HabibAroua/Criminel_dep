@@ -1,47 +1,49 @@
-<%= form_with(model: victim, local: true) do |form| %>
-  <% if victim.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(victim.errors.count, "error") %> prohibited this victim from being saved:</h2>
-
-      <ul>
-      <% victim.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
+<br>
+<br>
+<center>
+  <h2>Edit this case</h2>
+    <%= form_with(model: victim, local: true) do |form| %>
+      <% if victim.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(victim.errors.count, "error") %> prohibited this victim from being saved:</h2>
+          <ul>
+            <% victim.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
       <% end %>
       </ul>
     </div>
   <% end %>
-
-  <div class="field">
-    <%= form.label :cin %>
-    <%= form.text_field :cin, id: :victim_cin %>
-  </div>
-
-  <div class="field">
-    <%= form.label :first_name %>
-    <%= form.text_field :first_name, id: :victim_first_name %>
-  </div>
-
-  <div class="field">
-    <%= form.label :last_name %>
-    <%= form.text_field :last_name, id: :victim_last_name %>
-  </div>
-
-  <div class="field">
-    <%= form.label :problem %>
-    <%= form.text_field :problem, id: :victim_problem %>
-  </div>
-
-  <div class="field">
-    <%= form.label :cause_of_death %>
-    <%= form.text_field :cause_of_death, id: :victim_cause_of_death %>
-  </div>
-
-  <div class="field">
-    <%= form.label :date_of_death %>
-    <%= form.date_select :date_of_death, id: :victim_date_of_death %>
-  </div>
-
-  <div class="actions">
-    <%= form.submit %>
-  </div>
+<table>
+  <tr>
+    <td><%= form.label :cin %></td>
+    <td><%= form.text_field :cin, id: :victim_cin , class:"form-control" %></td>
+  </tr>
+  <tr>
+    <td><%= form.label :first_name %></td>
+    <td><%= form.text_field :first_name, id: :victim_first_name , class:"form-control" %></td>
+  </tr>
+  <tr>
+    <td><%= form.label :last_name %></td>
+    <td><%= form.text_field :last_name, id: :victim_last_name , class:"form-control" %></td>
+  </tr>
+  <tr>
+    <td><%= form.label :problem %></td>
+    <td><%= form.text_field :problem, id: :victim_problem , class:"form-control" %></td>
+  </tr>
+  <tr>
+    <td><%= form.label :cause_of_death %></td>
+    <td><%= form.text_field :cause_of_death, id: :victim_cause_of_death , class:"form-control" %></td>
+  </tr>
+  <tr>
+    <td><%= form.label :date_of_death %></td>
+    <td><%= form.date_select :date_of_death, id: :victim_date_of_death , class:"form-control" %></td>
+  </tr>
+  <tr>
+    <td colspan="2">
+      <div class="actions">
+        <%= form.submit "Update" , class:"btn btn-lg btn-primary btn-block" %>
+      </div>
+    </td>
+  </tr>
+</table>
 <% end %>
