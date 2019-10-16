@@ -36,6 +36,9 @@ class CulpritsController < ApplicationController
       end
     end
   end
+  
+  def wanted
+  end
 
   # PATCH/PUT /culprits/1
   # PATCH/PUT /culprits/1.json

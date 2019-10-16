@@ -28,6 +28,7 @@ Rails.application.routes.draw do
   post '/the_cases/insert_waitness' , to: 'the_cases#insert_waitness'
     #post 'governorates/:id/insert'
   get 'governorates/new_police_station'
+  get 'wanteds/find'
   
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
