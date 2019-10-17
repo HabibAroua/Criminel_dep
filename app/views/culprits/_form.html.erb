@@ -1,7 +1,7 @@
 <br>
 <br>
 <center>
-  <h2>Edit this case</h2>
+  <h2>Edit culprit</h2>
   <%= form_with(model: culprit, local: true) do |form| %>
     <% if culprit.errors.any? %>
       <div id="error_explanation">
@@ -50,7 +50,9 @@
           </div>
         </td>
       </tr>
+    </table>
+    <%= link_to 'Show', @culprit %> 
+    <%= link_to 'Back', culprits_path %>
   <% end %>
-  <%= link_to 'Show', @culprit %> |
-  <%= link_to 'Back', culprits_path %>
+  
 </center>
