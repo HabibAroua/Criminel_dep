@@ -22,3 +22,5 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+<img src= "https://github.com/HabibAroua/TCD/blob/master/documentation/slide/accueil.png" />
